@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruman&iacute;a</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
+</head>
+<body>
+    <div class="cajaindex">
+        <header><img src="./imagenes/header.jpg" alt="Welcome to Romania"></header>
+        <nav>
+            <ul id="menuList" tabindex="0">
+                <li tabindex="1" class="linone" onclick="verPortada()">
+                    <img src="imagenes/navportada.png" alt="Escudo de Rumania">
+                </li>
+                <li tabindex="2" onclick="cambiarTitulo('Situación Geográfica')">Situación Geográfica</li>
+                <li tabindex="3" onclick="cambiarTitulo('Población y Capital')">Población y Capital</li>
+                <li tabindex="4" onclick="cambiarTitulo('Historia')">Historia</li>
+                <li tabindex="5" onclick="cambiarTitulo('Política')">Política</li>
+                <li tabindex="6" onclick="cambiarTitulo('Sanidad')">Sanidad</li>
+                <li tabindex="7" onclick="cambiarTitulo('Educación')">Educación</li>
+                <li tabindex="8" onclick="cambiarTitulo('Economía')">Economía</li>
+                <li tabindex="9" onclick="cambiarTitulo('Idioma')">Idioma</li>
+                <li tabindex="10" onclick="cambiarTitulo('Religión')">Religión</li>
+                <li tabindex="11" onclick="cambiarTitulo('Influencia Rumana')">Influencia Rumana</li>
+            </ul>
+        </nav>
+        <main>
+            <h1 class="h1">Modificado en JS</h1>
+            <div class="portada">
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+                <div class="imgporta"></div>
+            </div>
+            <div class="situacióngeográfica">
+                <div id="sitGeoImg">
+                    <img src="imagenes/geografia.png" alt="Mapa de la situación geográfica" class="imggeog">
+                </div>
+                <div id="sitGeoMap">
+                    <iframe id="mapaFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611528.008190537!2d25.303546070307107!3d45.524161843813324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff26958976c3%3A0x84ef4f92a804b194!2zUnVtYW7DrWE!5e1!3m2!1ses!2ses!4v1702469645228!5m2!1ses!2ses" 
+                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="textimggeo">Bulgaria, Serbia, Hungr&iacute;a, Ucrania, Moldavia, el Mar Negro.</div>
+            </div>
+            <div class="poblaciónycapital">
+                <div class="cincuentadiv">
+                    <img src="imagenes/ciudadesprincipal.jpg" alt="Mapa con las Ciudades Principales" class="imgcapit">
+                </div>
+                <div class="cincuentadiv2">
+                    <ul class="ulcentr">
+                        <li class="region">Noreste
+                            <ul>
+                                <li class="ciudad"><span class="txtresalt txtresaltpobl">Iasi:</span> es una ciudad hist&oacute;rica y culturalmente rica. Es conocida por sus universidades y su legado cultural, siendo considerada la cuna de la cultura rumana.</li>
+                            </ul></li>
+                        <li class="region">Sureste
+                            <ul>
+                                <li class="ciudad"><span class="txtresalt txtresaltpobl">Constanza: </span>es el principal puerto mar&iacute;timo de Ruman&iacute;a y un importante centro econ&oacute;mico y tur&iacute;stico. Es famosa por sus playas y su vida nocturna. </li>
+                            </ul></li>
+                        <li class="region">Sur
+                            <ul>
+                                <li class="ciudad"><span class="txtresalt txtresaltcap">Bucarest:</span> capital desde el 1862. Su arquitectura es mezcla de diferentes estilos. Econ&oacute;micamente es la ciudad m&aacute;s pr&oacute;spera de Ruman&iacute;a y principal centro industrial y de tranporte. Tiene una densidad de 7597,17 hab/km² (1,44 veces Madrid).</li>
+                            </ul></li>
+                        <li class="region">Suroeste
+                            <ul>
+                                <li class="ciudad"><span class="txtresalt txtresaltpobl">Craiova: </span>es una ciudad industrial y un centro cultural importante. Es conocida por su arquitectura hist&oacute;rica y su equipo de f&uacute;tbol, el FC Universitatea Craiova.
+                                </li>
+                            </ul></li>
+                        <li class="region">Oeste
+                            <ul>
+                                <li class="ciudad"><span class="txtresalt txtresaltpobl">Timisoara:</span> es una ciudad multicultural y moderna. Fue el lugar donde comenzaron las revoluciones de 1989 que llevaron al derrocamiento del r&eacute;gimen comunista en Ruman&iacute;a.
+                                </li>
+                            </ul></li>
+                        <li class="region">Noroeste
+                            <ul>
+                                <li class="ciudad"><span class="txtresalt txtresaltpobl">Cluj-Napoca: </span>es una de las ciudades m&aacute;s grandes y pr&oacute;speras de Ruman&iacute;a. Es conocida por su vibrante vida cultural y su prestigiosa universidad.</li>
+                            </ul></li>
+                        <li class="region">Centro 
+                            <ul>
+                                <li class="ciudad"><span class="txtresalt txtresaltpobl">Brasov:</span> es una ciudad tur&iacute;stica popular debido a su belleza natural y su proximidad a las monta&ntilde;as (C&aacute;rpatos). Es un centro cultural y ofrece acceso a las estaciones de esqu&iacute; cercanas.
+                                </li>
+                                <li class="ciudad"><span class="txtresalt txtresaltpobl">Sibiu:</span> es una ciudad hist&oacute;rica con un encanto medieval. Es conocida por su arquitectura, festivales culturales y su casco antiguo bien conservado.
+                                </li> 
+                            </ul> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="historia">
+                <div class="tresdivtext">
+                    <h2>Principales Hitos Políticos de Ruman&iacute;a</h2>
+                    <ul>
+                        <li class="espacioli">Principados de Moldavia y Valaquia.</li>
+                        <li class="espacioli"><span class="txtresalt">Primera Constituci&oacute;n</span> (1 de julio de 1866): 
+                            Establecimiento del Principado de Ruman&iacute;a con una constitución que marcó el inicio de la era moderna.</li>
+                        <li class="espacioli">Primera Guerra Mundial y unión de Ruman&iacute;a con Transilvania.</li>
+                        <li class="espacioli"><span class="txtresalt">Segunda Constituci&oacute;n</span> (29 de marzo de 1923): 
+                            Transformación en el Reino de Ruman&iacute;a para adaptarse a los cambios geopolíticos.</li>
+                        <li class="espacioli">Segunda Guerra Mundial y sus impactos en la nación.</li>
+                    </ul>
+                </div>
+                <div class="tresdivimg">
+                    <img src="imagenes/historia.jpg" alt="Corona">
+                </div>
+                <div class="tresdivtext2">
+                    <ul>
+                        <li class="espacioli"><span class="txtresalt">Primera Constituci&oacute;n Comunista</span> (13 de abril de 1948): 
+                            Establecimiento del estado socialista bajo el régimen de Nicolae Ceau&scedil;escu.</li>
+                        <li class="espacioli"><span class="txtresalt">Segunda Constituci&oacute;n Comunista</span> (21 de agosto de 1965): 
+                            Incremento de la represión política y consolidación del control totalitario.</li>
+                        <li class="espacioli">Protestas, revueltas, derrocamiento del r&eacute;gimen y fin del comunismo.</li>
+                        <li class="espacioli"><span class="txtresalt">Nueva Constituci&oacute;n</span> (21 de noviembre de 1991): 
+                            Adopción de la constitución actual, reflejo de la transición hacia la democracia.</li>
+                        <li class="espacioli">Ingreso a la OTAN en 2004 y a la Uni&oacute;n Europea en 2007.</li>
+                    </ul>
+                </div>
+            </div>        
+            <div class="política">
+                <div class="politizq">
+                    <div class="poliact">Pol&iacute;tica actual:</div>
+                    <div class="politext">
+                    La pol&iacute;tica actual en Ruman&iacute;a es muy parecida a la espa&ntilde;ola. Su mayor diferencia es que Ruman&iacute;a no cuenta con un rey. Espa&ntilde;a es una monarqu&iacute;a parlamentaria y Ruman&iacute;a es una <span class="txtresalt2" >rep&uacute;blica parlamentaria.</span> <br><br>
+                    Su presidente actual es Klaus Werner Iohannis; no pertenece a ningun partido pero cuenta con el apoyo del PNL (Partido Nacional Liberal).
+                    </div>
+                </div>
+                <div class="politdch">
+                    <div class="subpolidch">
+                        <div class="president1">
+                            <img class="imagen-redonda" src="imagenes/president1.jpg" alt="Klaus Iohannis">
+                        </div>  
+                        <div class="textdch">
+                            Klaus Iohannis<br><br>
+                            Presidente desde el 21 de diciembre de 2014
+                        </div>
+                    </div>
+                    <div class="subpolidch">
+                        <div class="textizq">
+                            Visita y almuerzo en el Palacio Real<br><br>
+                            13 de julio del 2015
+                        </div>
+                        <div class="president2">
+                            <img class="imagen-redonda" src="imagenes/president2.jpg" alt="Klaus Iohannis con el Rey">
+                        </div>
+                    </div>
+                </div>
+                <hr class="hrpolimedio">
+                <div>
+                    <div class="polihisto">L&Iacute;NEA DE TIEMPO</div>
+                    <div class="polihislist">
+                        <div class="tampolhist">
+                            <ul>
+                                <li>Reinado de Carol I (1866-1914):
+                                    <ul class="nostyle">
+                                        <li>
+                                            <div class="hispolimgs">
+                                                <img src="imagenes/carol1.jpg" alt="Carol I">
+                                            </div>
+                                            <div class="hispoltxts">
+                                                Ascenso al poder: Carol I de Hohenzollern-Sigmaringen, un pr&iacute;ncipe alem&aacute;n, fue elegido como pr&iacute;ncipe de Ruman&iacute;a en 1866. Asumi&oacute; el trono y se convirti&oacute; en el <span class="txtresalt3">primer rey de Ruman&iacute;a</span> en 1881.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Periodo de Entreguerras (1918-1939):
+                                    <ul class="nostyle">
+                                        <li>
+                                            <div class="hispolimgs">
+                                                <img src="imagenes/grandepresion.jpg" alt="La Gran Depresion">
+                                            </div>
+                                            <div class="hispoltxts">
+                                                En 1918 se form&oacute; la Gran Ruman&iacute;a (unificando territorios con Transilvania y otras regiones).<br><br> Ruman&iacute;a enfrent&oacute; inestabilidad pol&iacute;tica y crisis econ&oacute;mica debido a la Gran Depresi&oacute;n (1929-1941).<br><br>
+                                                <span class="txtresalt3" >Hubo diferentes gobiernos</span>.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Dictadura de Carol II (1938-1940):
+                                    <ul class="nostyle">
+                                        <li>
+                                            <div class="hispolimgs">
+                                                <img src="imagenes/carol2.jpg" alt="Carol II">
+                                            </div>
+                                            <div class="hispoltxts">
+                                                Carol II asumi&oacute; el trono en 1930. En 1938, <span class="txtresalt3" >instaur&oacute; una dictadura</span> personal tras la aprobaci&oacute;n de una nueva constituci&oacute;n.<br><br>
+                                                Durante su dictadura, Carol II gobern&oacute; con mano dura, suprimiendo las libertades civiles, restringiendo la actividad pol&iacute;tica y persiguiendo a la oposici&oacute;n.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tampolhist">
+                            <ul>
+                                <li>Segunda Guerra Mundial y Comunismo:
+                                    <ul class="nostyle">
+                                        <li>
+                                            <div class="hispolimgs">
+                                                <img src="imagenes/comunismo.jpg" alt="Nicolae Ceausescu">
+                                            </div>
+                                            <div class="hispoltxts">
+                                                Durante la guerra, Ruman&iacute;a fue <span class="txtresalt3" >ocupada por el Eje</span> (especialmente Alemania). Perdi&oacute; territorios y sufri&oacute; graves consecuencias.<br><br>
+                                                Posteriormente, Ruman&iacute;a <span class="txtresalt3">se convirti&oacute; en comunista</span> bajo el regimen de Gheorghe Gheorghiu-Dej y, posteriormente, de Nicolae Ceau&scedil;escu.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Revoluci&oacute;n de 1989 y Transici&oacute;n democr&aacute;tica:
+                                    <ul class="nostyle">
+                                        <li>
+                                            <div class="hispolimgs">
+                                                <img src="imagenes/revolucion.jpg" alt="La Revolucion" id="imgRevol">
+                                            </div>
+                                            <div class="hispoltxts">
+                                                El 1989 se produjo <span class="txtresalt3">la Revoluci&oacute;n</span>. El 25 de diciembre, Nicolae Ceau&scedil;escu fue ejecutado junto a su esposa, Elena Ceau&scedil;escu (fusilados por 80 soldados y que recibieron 120 impactos de bala).<br><br>
+                                                <span class="txtresalt3" >Transici&oacute;n a la democracia</span>: Tras la revoluci&oacute;n, se estableci&oacute; un gobierno de transici&oacute;n y se inici&oacute; el paso hacia la democracia. Se llevaron a cabo elecciones libres y se implementaron reformas pol&iacute;ticas, econ&oacute;micas y sociales.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>Democracia post-comunista y la Uni&oacute;n Europea:
+                                    <ul class="nostyle">
+                                        <li>
+                                            <div class="hispolimgs">
+                                                <img src="imagenes/rumaniaotan.jpg" alt="Otan" id="imgOtan">
+                                            </div>
+                                            <div class="hispoltxts">
+                                                Integraci&oacute;n europea: Ruman&iacute;a se uni&oacute; a la OTAN en 2004 y a la Uni&oacute;n Europea en 2007. <br><br>
+                                                En la actualidad, Ruman&iacute;a es una rep&uacute;blica parlamentaria con un sistema multipartidista. 
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sanidad">
+                <div class="saniimg">
+                    <div class="imgsaniizq"><img src="imagenes/sanidad/hospital1.jpg" alt="Hospital Baia Mare"></div>
+                    <div class="imgsaniizq"><img src="imagenes/sanidad/hospital2.jpg" alt="Camas en un hospital"></div>
+                    <div class="imgsaniizq"><img src="imagenes/sanidad/hospital3.jpg" alt="Estetoscopio"></div>
+                    <div class="imgsaniizq"><img src="imagenes/sanidad/hospital4.jpg" alt="Camas de hospital"></div>
+                </div>
+                <div class="sanidtxt">
+                    El sistema sanitario, actualmente, es igual al sistema espa&ntilde;ol. 
+                    <br><br>
+                    Los dos pa&iacute;ses cuentan con el <span class="txtresalt4">"Sistema Nacional de Seguros de Salud"</span> , aunque en el caso de Ruman&iacute;a el sistema est&aacute; menos desarollado y peor financiado en comparaci&oacute;n con el de Espa&ntilde;a. 
+                    <br><br>
+                    Dicho Sistema Nacional se implement&oacute; en el 1999, a diferencia de Espa&ntilde;a que fue 13 a&ntilde;os antes (1986).
+                    <br><br>
+                    <span class="txtresalt4">Antes de dicho sistema</span>, Nicolae Ceau&scedil;escu, hab&iacute;a puesto en marcha un sistema de salud centralizado y de propiedad estatal, siguiendo el modelo sovi&eacute;tico. Este sistema tard&oacute; 20 a&ntilde;os en consolidarse (1960-1980).
+                    <br><br>
+                    Se construyeron numerosos hospitales y centros de salud en todo el pa&iacute;s, y la atenci&oacute;n m&eacute;dica era gratuita y universal. Sin embargo, la calidad de los servicios de salud disminuy&oacute; debido a la falta de recursos y una planificaci&oacute;n ineficiente.
+                    <br><br>
+                    Antes de la Segunda Guerra Mundial exist&iacute;an hospitales p&uacute;blicos y privados. 
+                    <br><br>
+                    Los hospitales p&uacute;blicos generalmente proporcionaban <span class="txtresalt4">atenci&oacute;n m&eacute;dica a bajo costo</span> o de forma gratuita para aquellos que no pod&iacute;an pagar los servicios m&eacute;dicos. 
+                    <br><br>
+                    Los hospitales privados, por otro lado, generalmente requer&iacute;an el pago directo de los servicios.
+                    <br><br>Los costos de la atenci&oacute;n m&eacute;dica generalmente corr&iacute;an a cargo del paciente.
+                </div>
+                <div class="saniimg">
+                    <div class="imgsanidch"><img src="imagenes/sanidad/hospital5.jpg" alt="Habitacion de hospital"></div>
+                    <div class="imgsanidch"><img src="imagenes/sanidad/hospital6.jpg" alt="Hospital por la noche"></div>
+                    <div class="imgsanidch"><img src="imagenes/sanidad/hospital7.jpg" alt="Huelga de sanitarios"></div>
+                    <div class="imgsanidch"><img src="imagenes/sanidad/hospital8.jpg" alt="Hospital Clinico"></div> 
+                </div>
+            </div>
+            <div class="educación">
+                <div class="container">
+                    <div class="education-section animate-text">
+                    <div class="sub-section">
+                        <h2 class="subtitle">Educaci&oacute;n Preescolar (opcional)</h2>
+                        <p class="paragraph">Edades: de 3 a 6 a&ntilde;os</p>
+                    </div>
+                    <div class="sub-section">
+                        <h2 class="subtitle">Educaci&oacute;n Primaria (obligatoria)</h2>
+                        <p class="paragraph">Clases I-IV; edades de 6-7 a 10-11 a&ntilde;os (desde 1860)</p>
+                    </div>
+                    <div class="sub-section3">
+                        <h2 class="subtitle">Educaci&oacute;n Secundaria</h2>
+                        <p class="paragraph">Ciclo inferior (Gimnaziu, obligatorio): Clases V-VIII; edades de 11-12 a 14-15 a&ntilde;os (desde 1950)</p>
+                        <p class="paragraph">Ciclo Superior (Liceu, opcional): Clases IX-XII; edades de 15-16 a 18-19 a&ntilde;os (desde 1970)</p>
+                    </div>
+                    </div>
+                    <div class="animate-text">
+                    <h2 class="subtitle">Despu&eacute;s tenemos:</h2>
+                    <p class="paragraph"><span class="txtresalt">Educaci&oacute;n Superior:</span> Es necesario pasar un examen llamado "Bacalaureat" (Bachillerato). Con ello se puede acceder a la universidad.</p>
+                    <p class="paragraph"><span class="txtresalt">Formaci&oacute;n Profesional:</span> Muy diversa dependiendo de cada caso. En la mayor&iacute;a de los casos se debe tener superado el ciclo superior de la Educaci&oacute;n Secundaria.</p>
+                    </div>
+                    <div class="eduimgizq">
+                        <img src="imagenes/tranvia_escolar.jpg" alt="Tranvia Escolar" class="image">
+                    </div>
+                    <div class="edutextdch">
+                        <p class="paragraph animate-text">Ruman&iacute;a cuenta con un sistema educativo rico en historia y oportunidades para el crecimiento personal y profesional de los estudiantes.</p>  
+                    </div>
+                </div>
+            </div>
+            <div class="economía">
+                <div class="econoizq">
+                    <h2 class="econoh2">Moneda oficial, derivados y variantes:</h2>
+                    <ul>
+                        <li>Ban/bani (100 bani equivalen a 1 leu o RON): 1, 5, 10, 50</li>
+                        <li>Leu/lei (tambi&eacute;n llamado RON): 1, 5, 10, 20, 50, 100, 200, 500</li>
+                    </ul>
+                    <br>
+                    Este tipo de divisa (RON) se utiliza desde el 2005. Antes se utilizaba el (ROL). 
+                    <ul>
+                        <li class="lirol">1 RON = 10.000 ROL</li>
+                    </ul>
+                    <br>
+                    La equivalencia EURO - RON varia constantemente.
+                    <br> Ahora mismo, 1&euro; = 4,94 RON.
+                    <br><br>
+                    Los sueldos var&iacute;an dr&aacute;sticamente dependiendo de muchisimos factores. <span class="txtresalt3">La ley establece un SMIC</span> (Salario M&iacute;nimo Interprofesional Convenido) de 606,10&euro; a fecha de julio del 2023. 
+                    <br><br>
+                    Este SMIC var&iacute;a cada a&ntilde;o considerablemente. Hace tan solo 2 a&ntilde;os, en el 2021, era de 467,50&euro;. 
+                    <br><br>
+                    Tan solo son <span class="txtresalt5">12 pagas</span> anuales. 
+                    <br><br>
+                    Un <span class="txtresalt4">sueldo promedio</span> suele andar entre los 3000-5000 RON (607&euro; - 1012&euro;).
+                </div>
+                <div class="econodch">
+                    Ruman&iacute;a <span class="txtresalt4">produce casi de todo</span>, tanto para uso propio como para la exportacion. 
+                    <br><br>
+                    <span class="txtresalt4">Hist&oacute;ricamente ha destacado</span> en la agricultura, ganader&iacute;a, industria petrolera, petroqu&iacute;mica, textil, sider&uacute;rgica y energ&iacute;a hidroel&eacute;ctrica. 
+                        Actualmente, ha progresado en su capacidad de ser autosuficiente, especialmente en la producci&oacute;n de alimentos y energ&iacute;a.
+                    <br><br>
+                    <p class="econoul">Principales productos exportados:</p>
+                    <br>
+                    <ul class="econoul">
+                        <li>Calzado diverso a Alemania, Italia, Francia y Espa&ntilde;a.</li>
+                        <li>Maquinaria y equipos a Alemania, Italia, Francia y Reino Unido.</li>
+                        <li>Veh&iacute;culos y componentes de autom&oacute;viles a Alemania, Italia, Francia y Reino Unido.</li>
+                        <li>Productos textiles y confeccionados a Italia, Alemania, Francia y Espa&ntilde;a.</li>
+                        <li>Cereales y granos (trigo, ma&iacute;z) a Egipto, Italia, Irak, Ir&aacute;n y Turqu&iacute;a.</li>
+                        <li>Productos qu&iacute;micos y petroqu&iacute;micos a Turqu&iacute;a, Italia, Alemania y Bulgaria.</li>
+                        <li>Tecnolog&iacute;as de la informaci&oacute;n y comunicaci&oacute;n (TIC) a Reino Unido, Alemania, Francia y Pa&iacute;ses Bajos.</li>
+                    </ul>	   
+                </div>
+                <div>
+                    <img id="img-giratoria" src="imagenes/economia-circular.png" alt="economía Circular">
+                </div>
+                <div class="economía3">
+                    <img src="imagenes/economia3.jpg" alt="Meme sobre economía">
+                </div> 
+                <div class="econogif">
+                    <img src="imagenes/economia2.gif" alt="economía GIF">
+                </div>
+            </div>
+            <div class="idioma">
+                <h2 class="idirumh2">Rumano</h2>
+                <div class="idiprincipal">
+                    <br class="clear">
+                    <p class="txtidiprinci">
+                        El <span class="txtresalt4">&uacute;nico idioma oficial</span> es el rumano. Proviene de lo que se conoce como "lat&iacute;n vulgar" y a trav&eacute;s de diversos cambios e influencias (como la eslava y turca) se convirti&oacute; en el idioma actual. 
+                        <br><br>
+                        En 1863 se estableci&oacute; como idioma oficial.
+                    </p>
+                    <img class="imgidiprinci" src="imagenes/idiomas/abecedario.jpg" alt="abecedario">
+                </div>
+                <hr class="hridioma">
+                <h2 class="idih2">Otros Idiomas Hablados</h2>
+                <div class="idisecundario">
+                    <div class="container2">
+                        <div class="language">
+                            <img src="imagenes/idiomas/hungaro.jpg" alt="hungaro" onclick="toggleInfo('hungaro')">
+                            <span class="language-name">H&uacute;ngaro</span>
+                        </div>
+                        <div class="language">
+                            <img src="imagenes/idiomas/aleman.jpg" alt="aleman" onclick="toggleInfo('aleman')">
+                            <span class="language-name">Alem&aacute;n</span>
+                        </div>
+                        <div class="language">
+                            <img src="imagenes/idiomas/turco.jpg" alt="turco" onclick="toggleInfo('turco')">
+                            <span class="language-name">Turco</span>
+                        </div>
+                        <div class="language">
+                            <img src="imagenes/idiomas/ruso.jpg" alt="ruso" onclick="toggleInfo('ruso')">
+                            <span class="language-name">Ruso y ucraniano</span>
+                        </div>
+                        <div class="language">
+                            <img src="imagenes/idiomas/bulgaro.jpg" alt="bulgaro" onclick="toggleInfo('bulgaro')">
+                            <span class="language-name">B&uacute;lgaro</span>
+                        </div>
+                        <div class="language">
+                            <img src="imagenes/idiomas/romani.jpg" alt="romani" onclick="toggleInfo('romani')">
+                            <span class="language-name">Romani</span>
+                        </div>
+                    </div>
+                    <div class="language-info" id="nada-info">
+                        <p id="p-info-idiomas">Haga click sobre las diferentes banderas para saber m&aacute;s de su respectivo idioma.</p>
+                    </div>
+                    <div class="language-info" id="hungaro-info">
+                        <p>Es hablado por una comunidad importante en Ruman&iacute;a, principalmente en la regi&oacute;n de Transilvania y en &aacute;reas cercanas a la frontera con Hungr&iacute;a. Se estima que alrededor del 6-7% de la poblaci&oacute;n de Ruman&iacute;a habla h&uacute;ngaro, lo que equivale a aproximadamente 1,2 a 1,4 millones de personas.</p>
+                    </div>
+                    <div class="language-info" id="aleman-info">
+                        <p>Se encuentra en comunidades alemanas en Transilvania y en algunas &aacute;reas de Banat. Aunque el n&uacute;mero de hablantes ha disminuido en las &uacute;ltimas d&eacute;cadas debido a la emigraci&oacute;n, todav&iacute;a hay estimaciones de alrededor de 50.000 personas que hablan alem&aacute;n en Ruman&iacute;a.</p>
+                    </div>
+                    <div class="language-info" id="turco-info">
+                        <p>Se habla en la regi&oacute;n de Dobruja. Se estima que alrededor de 25.000 a 30.000 personas en Ruman&iacute;a hablan turco.</p>
+                    </div>
+                    <div class="language-info" id="ruso-info">
+                        <p>Estos idiomas son hablados especialmente en el norte de Moldavia y en el sur de Bucovina. El n&uacute;mero total de hablantes no es f&aacute;cilmente cuantificable, pero se estima que hay alrededor de 70.000 personas que hablan ruso y alrededor de 25.000 personas que hablan ucraniano en Ruman&iacute;a.</p>
+                    </div>
+                    <div class="language-info" id="bulgaro-info">
+                        <p>En la regi&oacute;n de Dobruja; se estima que alrededor de 10.000 personas hablan b&uacute;lgaro en Ruman&iacute;a.</p>
+                    </div>
+                    <div class="language-info" id="romani-info">
+                        <p>No se sabe con exactitud c&oacute;mo de grande es la comunidad gitana en Ruman&iacute;a pero se estima que m&iacute;nimo es un 10%; alrededor de 2 millones de personas que se encuentran repartidas por todo el territorio rumano. </p>
+                    </div>
+                </div>
+                <hr class="hridioma">
+                <div class="frases-container">
+                    <h2 class="titulo-frases">Conversaciones útiles en Español y Rumano</h2>
+                    <div id="frases-list" class="frases-list">
+                        <ul>
+                            <li class="frase-item">"¡Hola!" - <span class="rumano">Salut!</span></li>
+                            <li class="frase-item">"Gracias." - <span class="rumano">Mulțumesc!</span></li>
+                            <li class="frase-item">"¿Cómo estás?" - <span class="rumano">Ce faci?</span></li>
+                            <li class="frase-item">"Te quiero." - <span class="rumano">Te iubesc!</span></li>
+                            <li class="frase-item">"¿Dónde está el baño?" - <span class="rumano">Unde este baia?</span></li>
+                            <li class="frase-item">"Buenos días." - <span class="rumano">Bună dimineața!</span></li>
+                            <li class="frase-item">"Adiós." - <span class="rumano">La revedere!</span></li>
+                            <li class="frase-item">"¿Cómo estás?" - <span class="rumano">Ce mai faci?</span></li>
+                            <li class="frase-item">"Disculpe." - <span class="rumano">Mă scuzați.</span></li>
+                            <li class="frase-item">"¿Cuánto cuesta?" - <span class="rumano">Cat costa?</span></li>
+                            <li class="frase-item">"Con gusto." - <span class="rumano">Cu plăcere!</span></li>
+                            <li class="frase-item">"Lo siento." - <span class="rumano">Îmi pare rău.</span></li>
+                            <li class="frase-item">"Ven conmigo." - <span class="rumano">Vino cu mine!</span></li>
+                            <li class="frase-item">"¿Qué tan lejos está?" - <span class="rumano">Cât de departe este?</span></li>
+                            <li class="frase-item">"¡Salud!" - <span class="rumano">Noroc!</span></li>
+                            <li class="frase-item">"Tienes razón." - <span class="rumano">Ai dreptate.</span></li>
+                            <li class="frase-item">"¿Qué haces?" - <span class="rumano">Ce mai faci?</span></li>
+                            <li class="frase-item">"Me gusta eso." - <span class="rumano">Îmi place asta.</span></li>
+                            <li class="frase-item">"¿Dónde está el restaurante?" - <span class="rumano">Unde este restaurantul?</span></li>
+                            <li class="frase-item">"¿Qué haces mañana?" - <span class="rumano">Ce faci de mâine?</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="religión">
+                <div class="intro">
+                    <h2>Diversidad religiosa y cultural</h2>
+                </div>
+                <div class="main-content">
+                    <div class="religión-info">
+                        <h2>La Religi&oacute;n en Ruman&iacute;a</h2>
+                        <p>Ruman&iacute;a tiene una rica historia religiosa. La religi&oacute;n predominante es el cristianismo ortodoxo, que ha sido parte de la identidad del pa&iacute;s desde hace siglos.</p>
+                        <br>
+                        <p>La Iglesia Ortodoxa Rumana tiene una fuerte presencia y ha influido en la vida de la poblaci&oacute;n, incluso en temas pol&iacute;ticos y sociales.</p>
+                        <br>
+                        <p>Adem&aacute;s del cristianismo ortodoxo, hay otras religiónes minoritarias en Ruman&iacute;a, como el catolicismo, el protestantismo, el juda&iacute;smo y el islam.</p>
+                    </div>
+                    <div class="celebrations">
+                        <h2>Celebraciones Religiosas en Ruman&iacute;a</h2>
+                        <ul>
+                            <li class="espacioli">**Pascua Ortodoxa:** Celebrada con fervor, la Pascua ortodoxa es una festividad importante que incluye tradiciones como la pintura de huevos y la medianoche del servicio litúrgico.</li>
+                            <li class="espacioli">**Navidad:** La Navidad ortodoxa se celebra con servicios religiosos, comidas festivas y tradiciones arraigadas en la cultura rumana.</li>
+                            <li class="espacioli">**Hanukkah:** La comunidad judía celebra Hanukkah con rituales tradicionales, encendido de velas y festivales comunitarios.</li>
+                            <li class="espacioli">**Ramadán:** La comunidad musulmana observa el Ramadán con ayuno diario y actividades religiosas para conmemorar la revelación del Corán.</li>
+                            <li class="espacioli">**Fiestas Católicas:** Eventos como la Semana Santa y la Asunción son celebrados por la comunidad católica, a menudo acompañados de procesiones y servicios religiosos.</li>
+                        </ul>
+                    </div>
+                    <div class="imgrelicrono">
+                        <img src="imagenes/iglesia/iglesia1.png" alt="cronoreli" id="imgramificacion">
+                    </div>
+                    <div class="image-gallery">
+                        <div class="image-item">
+                            <img src="imagenes/iglesia/imagen1.JPG" alt="Iglesia ortodoxa rumana">
+                            <p>Iglesia ortodoxa rumana</p>
+                        </div>
+                        <div class="image-item">
+                            <img src="imagenes/iglesia/imagen2.JPG" alt="Catedral de la Santa Trinidad">
+                            <p>Catedral de la Santa Trinidad</p>
+                        </div>
+                        <div class="image-item">
+                            <img src="imagenes/iglesia/imagen3.JPG" alt="Sinagoga en Oradea">
+                            <p>Sinagoga en Oradea</p>
+                        </div>
+                        <div class="image-item">
+                            <img src="imagenes/iglesia/imagen4.jpg" alt="Mezquita en Ruman&iacute;a">
+                            <p>Mezquita en Ruman&iacute;a</p>
+                        </div>
+                        <div class="image-item">
+                            <img src="imagenes/iglesia/imagen5.jpg" alt="Festividad religiosa en Ruman&iacute;a">
+                            <p>Festividad religiosa en Ruman&iacute;a</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="influenciarumana">
+                <div id="popular">
+                    <p class="subtit">Influencias Populares</p>
+                    <div id="dracula">
+                        
+                        <p class="inclunesubtit">Drácula:</p>
+                            Drácula es un personaje literario creado por el autor irlandés Bram Stoker en su novela epistolar "Drácula", publicada por primera vez en 1897. 
+                        <br><br>
+                            La historia sigue a Jonathan Harker, un abogado inglés, que viaja a Transilvania para cerrar un trato inmobiliario con el Conde Drácula. Sin embargo, 
+                            pronto descubre que Drácula es un vampiro sediento de sangre y que planea extender su influencia maligna a Londres.
+                        <br><br>
+                            El nombre "Drácula" proviene de Vlad III, príncipe de Valaquia, también conocido como Vlad el Empalador. Vlad III fue conocido por su crueldad en la lucha contra los otomanos y su 
+                            reputación de empalar a sus enemigos. Bram Stoker se inspiró en esta figura histórica para crear el personaje del Conde Drácula, un ser inmortal con poderes sobrenaturales.
+
+                        <p class="inclunesubtit">Transilvania:</p>
+                            Transilvania es una región histórica ubicada en el centro de Ruman&iacute;a. Es conocida por su paisaje montañoso, castillos antiguos y la rica mezcla de culturas que ha influido en su 
+                            historia. Aunque Transilvania es famosa por su asociación con el mito de los vampiros, es importante señalar que no es simplemente el hogar de criaturas sobrenaturales, sino una 
+                            región con una rica historia y patrimonio cultural.
+
+                        <p class="inclunesubtit">Vampiros:</p>
+                            Los vampiros son criaturas mitológicas que han aparecido en diversas culturas y mitologías a lo largo de la historia. La versión moderna del vampiro, como la que se presenta en la 
+                            novela de Bram Stoker, se caracteriza por ser un ser no muerto que se alimenta de la sangre de los vivos para mantenerse inmortal. Algunos rasgos comunes asociados con los vampiros 
+                            incluyen la aversión a la luz solar, la capacidad de transformarse en murciélagos o lobos, y la falta de reflejo en los espejos.
+                        <br><br>
+                            La figura del vampiro ha sido explorada y reinventada en innumerables obras literarias, cinematográficas y televisivas a lo largo del tiempo. Desde el Conde Drácula de Stoker hasta 
+                            los vampiros románticos de Anne Rice, el mito del vampiro ha perdurado y evolucionado en la cultura popular.
+                    </div>
+                </div>
+                <div id="deporte">
+                    <p class="subtit">Deportistas Famosos</p>
+                    <div id="deportistas">
+                        <p class="inclunesubtit">Gimnasia Artística:</p>
+                        <span>Nadia Comăneci</span>
+                        Es una leyenda de la gimnasia artística y la primera gimnasta en la historia en obtener una puntuación perfecta de 10 en los Juegos Olímpicos de Montreal 1976.
+
+                        <p class="inclunesubtit">Tenis:</p>
+                        <span>Simona Halep</span>
+                        Considerada una de las mejores tenistas del mundo, ha logrado múltiples títulos, incluido el título de Grand Slam en Roland Garros en 2018.
+
+                        <p class="inclunesubtit">Atletismo:</p>
+                        <span>Gabriela Szabo</span>
+                        Fue una destacada corredora de fondo y medallista de oro olímpica en los Juegos de Sídney 2000 en la prueba de 5.000 metros.
+
+                        <p class="inclunesubtit">Fútbol:</p>
+                        <span>Gheorghe Hagi</span>
+                        Conocido como "El Maradona de los Cárpatos", Hagi es uno de los futbolistas más legendarios de Rumanía y ha tenido una destacada carrera tanto en clubes como en la selección nacional.
+                        
+                        <p class="inclunesubtit">Halterofilia:</p>
+                        <span>Nicu Vlad</span>
+                        Ganador de múltiples medallas olímpicas y mundiales en la categoría de halterofilia, Vlad es uno de los atletas más exitosos en este deporte en la historia de Rumanía.
+                        
+                        <p class="inclunesubtit">Remo:</p>
+                        <span>Elisabeta Lipă</span>
+                        Considerada una de las mejores remeras de todos los tiempos, Lipă ha ganado múltiples medallas de oro olímpicas en la categoría de remo.
+                        
+                        <p class="inclunesubtit">Boxeo:</p>
+                        <span>Leonard Doroftei</span>
+                        Es un exboxeador y campeón mundial de peso ligero, reconocido por su habilidad en el ring y sus logros en el ámbito internacional.
+                        
+                        <p class="inclunesubtit">Esgrima:</p>
+                        <span>Ana Maria Brânză</span>
+                        Destacada esgrimista rumana que ha ganado medallas en diversas competiciones internacionales, incluidos los Juegos Olímpicos.
+                    </div>
+                </div>
+                <div id="audiovisual">
+                    <p class="subtit">Influencias Audiovisuales</p>
+                    <div id="nombrvisuales">
+
+                        <p class="inclunesubtit">Resident Evil Village (Videojuego, 2021):</p>
+
+                        El juego se desarrolla en un entorno ficticio en Rumanía, donde los creadores han incorporado la rica arquitectura y el folclore del país para inyectar autenticidad a la experiencia del jugador.
+                        
+                        <p class="inclunesubtit">The Nun (Película, 2018):</p>
+
+                        La película "The Nun" también eligió locaciones en Rumanía, utilizando el monasterio de Cârţa y capturando la arquitectura distintiva y el pintoresco paisaje del país como telón de fondo para algunas de sus escenas.
+                        
+                        <p class="inclunesubtit">Ana Ularu (Actriz):</p>
+
+                        Ana Ularu, destacada actriz rumana, ha dejado su huella en producciones internacionales como "Serena" y "Inferno", contribuyendo al reconocimiento del talento actoral rumano a nivel global.
+                        
+                        <p class="inclunesubtit">Alexander Nanau (Director de Cine):</p>
+
+                        Director de documentales rumano, Alexander Nanau, ganó reconocimiento internacional por su obra "Collective" en 2019, destacando la calidad del cine rumano en el escenario mundial.
+                        
+                        <p class="inclunesubtit">Edward Maya (Músico):</p>
+
+                        Edward Maya, famoso productor musical y músico rumano, ha dejado una marca duradera en la escena musical global con éxitos como "Stereo Love", consolidando la presencia musical de Rumanía.
+                        
+                        <p class="inclunesubtit">Mădălina Diana Ghenea (Actriz y Modelo):</p>
+
+                        Mădălina Ghenea, actriz y modelo rumana, ha participado en producciones internacionales como "Dom Hemingway" y "Youth", contribuyendo a la visibilidad de la industria del entretenimiento de Rumanía.
+                        
+                        <p class="inclunesubtit">Inna (Cantante):</p>
+
+                        Inna, reconocida cantante rumana de música dance y pop, ha logrado éxitos internacionales como "Hot" y "Sun is Up", consolidando su posición en la escena musical global.
+                        
+                        <p class="inclunesubtit">Hans Poelzig (Arquitectura en Películas):</p>
+
+                        El arquitecto Hans Poelzig diseñó el set para la película "The Golem" en 1920, influenciando la estética de películas de terror posteriores. Poelzig se inspiró en la arquitectura de Transilvania, región de Rumanía.
+                        
+                        <p class="inclunesubtit">Cristian Mungiu (Director de Cine):</p>
+
+                        Cristian Mungiu, director de cine rumano galardonado con la Palma de Oro en Cannes por "4 Months, 3 Weeks and 2 Days", refleja a través de su obra la realidad social rumana en la escena cinematográfica global.
+                        
+                        <p class="inclunesubtit">Vladimir Cosma (Compositor):</p>
+
+                        Vladimir Cosma, compositor rumano, es conocido por sus emotivas bandas sonoras en películas francesas, contribuyendo a la atmósfera cinematográfica global.
+                        
+                        <p class="inclunesubtit">O-Zone (Grupo Musical) - "Dragostea Din Tei" (Canción, 2004):</p>
+
+                        El grupo O-Zone lanzó la icónica canción "Dragostea Din Tei", que se convirtió en un fenómeno internacional. La canción destacó la presencia de Rumanía en el mapa musical mundial.
+                    </div>
+                </div>   
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-column footer-left">
+                <img src="imagenes/logo.jpg" alt="Logo Personal" class="footer-logo">
+                <p class="footer-text">&copy; 2023 Gabriel (Zimpi)</p>
+            </div>
+            <div class="footer-column footer-center">
+                <h2 class="footer-title">Informaci&oacute;n</h2>
+                <p class="footer-text">Cimpean Gabriel (Zimpi)</p>
+                <p class="footer-text">Pagina Principal (portafolio): <a href="https://gabrielzimpi.github.io/portafolio/" class="enlacepluriculturali"> VOLVER </a></p>
+            </div>
+            <div class="footer-column footer-right">
+                <h2 class="footer-title">Validaci&oacute;n: <span class="aaa">AAA</span></h2>
+                <div class="html-icons">
+                    <img src="imagenes/footer/logo2.png" alt="logo w3c">
+                    <img src="imagenes/footer/logo3.png" alt="logo css,js y html">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

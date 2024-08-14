@@ -1,0 +1,955 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+body    {
+    /*min-width: 1903px;*/
+    /*max-width: 1903px;*/
+    margin: auto;
+    background-image: url(imagenes/fondoweb.jpg);
+    background-size: cover;
+}
+/* Header*/
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-image: url(imagenes/header.jpg);
+        background-size: auto 100%;
+        position: relative;
+        text-align: center;
+    }
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(red, yellow, blue);
+        opacity: 0.65;
+    }
+    header img {
+        border: 0.4em solid black;
+        box-sizing: border-box;
+        margin: 2em auto 2em auto;
+        position: relative;
+        max-width: 100%; /* La imagen no puede ser más ancha que su contenedor */
+        height: auto; /* Mantener la proporción original de la imagen */
+        zoom: 60%;
+    }
+/* FIN Header*/
+/* Barra NAV */
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        background-color: #FF5252;
+        border: 0.2em solid rgba(0, 0, 0, 0.618);
+        color: #19338a;
+        font-weight: bolder;
+        font-size: 1.4em;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    nav li {
+        height: 4em;
+        vertical-align: middle;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 1em 0 1em;
+    }
+    nav li:hover {
+        background-color: rgba(255, 255, 0, 0.75);
+        cursor: pointer;
+    }
+    .linone:hover {
+        cursor: pointer;
+        background-color: #FF5252;
+    }
+    nav li:focus {
+        background-color: rgba(255, 255, 0, 0.75);
+    }
+/* FIN BARRA NAV */
+/* PORTADA */
+    .portada {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: space-around;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #333333;
+    }
+    .imgporta {
+        width: 9.9vw;
+        height: 22vh;
+        border: groove 2.5px black;
+        background-size: 100% 100%;
+        min-width: 10em;
+        background-color: white;
+    }
+/* FIN portada */
+/* situación geográfica */
+    #sitGeoImg, #sitGeoMap  {
+        width: auto;
+        float: left;
+        height: auto;
+        min-width: 17em;
+    }
+    .imggeog {
+        display: block;
+        margin: 1em auto;
+        width: 30vw;
+        height: auto;
+        min-width: 17em;
+    }
+    .textimggeo {
+        display: block;
+        margin: 1em auto;
+        text-align: center;
+        font-size: 2.5em;
+        width: 100%;
+        clear: both;
+    }
+    .situacióngeográfica    {
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+    #mapaFrame  {
+        display: block;
+        margin: 1em auto;
+        width: 30vw;
+        height: 83vh;
+        max-height: 30vw;
+        border: none;
+        min-width: 16em;
+        min-height: 16em;
+    }
+/* FIN situación geográfica */
+/* Poblacion y Capital */
+    .poblaciónycapital  {
+        align-items: center;
+        justify-content: center;
+    }
+    .cincuentadiv, .cincuentadiv2 {
+        width: 50%;
+        min-width: 20em;
+        margin-bottom: 1em;
+    }
+    .cincuentadiv2 {
+        margin-bottom: 2em;
+    }
+    .imgcapit{
+        border: 0.12em solid black;
+        margin: auto;
+        display: flex;
+        height: 54vh;
+        width: 30vw;
+        min-width: 19em;
+    }
+    .ulcentr    {
+        margin-left: 5em;
+    }
+    .region {
+        font-size: 80%;
+    }
+    .ciudad {
+        text-align: justify;
+        max-width: 50%;
+        margin: 0.5em auto 0.8em 4em;
+        list-style: none;
+    }
+/* FIN Poblacion y Capital */
+/* Historia */
+    .historia {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+    }
+    .tresdivtext, .tresdivtext2 {
+        flex: 1;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .espacioli:hover {
+        background-color: #ffeadb;  /* Fondo claro al pasar el ratón */
+        transition: background-color 1s ease;
+    }
+    .espacioli {
+        margin-left: 1em;
+        padding: 0.5em 0 0.5em 0.5em;
+    }
+    .txtresalt {
+        color: #ff4500;  /* Color de resaltado naranja */
+        font-weight: bold;
+    }
+    .tresdivimg {
+        margin: 1em;
+    }
+    .tresdivimg img {
+        width: 100%;
+        border-radius: 10px;
+    }
+/* FIN Historia */
+/* política */
+    .política   {
+        width: 90%;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .politizq   {
+        width: 70%;
+        text-align: justify;
+        min-width: 19em;
+    }
+    .poliact    {
+        font-weight: bolder;
+        font-size: 2em;
+        margin: 2em 1em 0 0;
+    }
+    .politext   {
+        margin: 1.5em 3em 0 0;
+    }
+    .politdch   {
+        width: 30%;
+        zoom: 80%;
+        margin-bottom: 1em;
+        display: flex;
+        min-width: 22em;
+        margin-top: 1em;
+    }
+    .subpolidch {
+        width: 100%;
+        min-width: 23em;
+    }
+    .hrpolimedio {
+        margin: 5em auto 1em auto;
+        width: 100%;
+    }
+    .hridioma {
+        margin: 2em auto 1em auto;
+        width: 60%;
+    }
+    .polihisto  {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 2em;
+    }
+    .polihislist{
+        margin: 1em 0 0 0;
+        display: flex;
+    }
+    .tampolhist{
+        width: 50%;
+        min-width: 18em;
+    }
+    #imgRevol   {
+        width: 90vw;
+        max-width: 21em;
+    }
+    #imgOtan{
+        max-width: 18em;
+    }
+/* FIN política */
+/* Sanidad */
+    .sanidad    {
+        margin-bottom: 2em;
+    }
+    .saniimg    {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        min-width: 20em;
+    }
+/* FIN Sanidad */
+/* economía */
+    .economía   {
+        margin: 2em auto 2em auto;
+        width: 80%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: center;
+    }
+    .economía3   {
+        zoom: 60%;
+        margin: 3em auto auto 8em;
+        width: 60%;
+        text-align: right;
+    }
+/* FIN economía */
+/* Idioma */
+    .idioma {
+        flex-direction: column;
+    }
+/* FIN Idioma */
+.cajaindex  {
+    background-color: white;
+}
+.situacióngeográfica, .poblaciónycapital, .historia, .política, .sanidad, .educación, .economía, .idioma, .religión, .influenciarumana, .subpolidch, .hrpolimedio, footer, li, .idisecundario, .clear, .image-gallery, .portada  {
+    clear: both;
+}
+.tresdivimg, .president1, .textdch, .textizq, .hispolimgs, .hispoltxts, .sanidtxt, .eduimgizq, .econoizq, .econodch, .economía3, .txtidiprinci, .imgidiprinci, .idirumh2, .religión-info, .personal3      {
+    float: left;
+}
+.president2, .edutextdch, .imgrelicrono, .personal2, .personal4 {
+    float: right;
+}
+.txtresalt2 {
+    font-weight:bolder;
+    color: #000000;
+    font-style: oblique;
+    font-size: 1.1em;
+    text-decoration:underline wavy rgb(28, 114, 167);
+}
+.txtresalt3 {
+    display: contents;
+    font-weight: bolder;
+    color: #000000;
+    font-style: oblique;
+    font-size: 1.1em;
+}
+.txtresalt4 {
+    font-weight:bolder;
+    color: #000000;
+    font-style: oblique;
+    font-size: 1em;
+    text-decoration:underline wavy rgb(28, 114, 167);
+}
+.txtresalt5 {
+    font-weight:bolder;
+    color: #000000;
+    font-style: oblique;
+}
+.txtresaltpobl  {
+    color:#0000FF;
+}
+.txtresaltcap  {
+    color: rgba(255, 0, 0, 0.849);
+}
+.idih2  {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1em;
+}
+.h1 {
+    text-align: center;
+    margin: 0.5em auto auto auto;
+    font-size: 3em;
+}
+.situacióngeográfica, .poblaciónycapital, .educación, .idioma, .política, .sanidad, .religión  {
+    margin-top: 2em;
+}
+.situacióngeográfica, .poblaciónycapital, .educación, .idioma, .h1, .historia, .política, .sanidad, .economía, .religión, .influenciarumana, .language-info 
+   {
+    display: none;
+}
+.religión {
+    animation: fadeIn 1s ease;
+    display: none;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3em;
+}
+.active {
+    display: block;
+}
+.activeFlex {
+    display:flex;
+}
+.president1 {
+    width: 40%;
+}
+.imagen-redonda{
+    border-radius: 30%;
+}
+.textdch    {
+    width: 50%;
+    text-align: center;
+    padding: 3em 0 0 0;
+}
+.president2 {
+    width: 50%;
+    min-width: 20em;
+}
+.textizq    {
+    width: 50%;
+    text-align: center;
+    padding: 3em 0 0 0;
+    min-width: 20em;
+}
+.hispolimgs {
+    width: 42%;
+    margin: 1em 0 1em 0;
+    min-width: 9.2em;
+}
+.hispoltxts {
+    width: 50%;
+    height: 229px;
+    margin: 1em 0 5em 0;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    min-width: 17em;
+}
+.nostyle    {
+    list-style: none;
+}
+.sanidtxt   {
+    width: 40%;
+    text-align: justify;
+    font-size: 1.3em;
+    min-width: 14em;
+    margin: 1em auto 1em auto;
+}
+.imgsaniizq{
+    text-align: center;
+}
+.imgsaniizq > img   {
+    border-radius: 20%;
+    border: solid 0.2em;
+    border-color: rgb(205, 205, 0) blue rgb(205, 205, 0) red;
+}
+.imgsanidch {
+    text-align: center;
+}
+.imgsanidch > img   {
+    border-radius: 20%;
+    border: solid 0.2em;
+    border-color: rgb(205, 205, 0) blue rgb(205, 205, 0) red;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+.image {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    width: 20vw;
+    min-width: 16em;
+}
+.animate-text {
+    animation: fadeInUp 1s ease-out;
+    margin-top: 1em;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.education-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+}
+.sub-section {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sub-section3 {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 15em;
+}
+.sub-section .subtitle, .sub-section3 .subtitle {
+    color: #3498db;
+    zoom: 92%;
+}
+.eduimgizq  {
+    width: 50%;
+}
+.edutextdch{
+    width: 40%;
+    min-width: 16em;
+}
+.econoh2{
+    margin: auto 0 0.8em 0;
+    text-align: center;
+}
+.lirol  {
+    list-style: none;
+    margin-left: 2em;
+    padding-top: 0.2em;
+    font-style: oblique;
+}
+.econoizq   {
+    width: 40%;
+    padding-right: 3vw;
+    text-align: justify;
+    min-width: 16em;
+}
+.econodch   {
+    width: 50%;
+    margin-top: 5vh;
+    min-width: 17em;
+}
+.econoul    {
+    margin-left: 3em;
+}
+.econoul > li   {
+    margin-left: 3em;
+}
+.econogif   {
+    zoom: 60%;
+    margin: 3em auto auto auto;
+}
+.economía3  > img, .econogif  > img  {
+    border-radius: 10%;
+    border: solid 0.35em black;
+}
+@keyframes giro-infinito {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+#img-giratoria {
+    animation: giro-infinito 20s linear infinite;
+    margin: 2em auto auto 2em;
+}
+#nada-info  {
+    height: 18em;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+#p-info-idiomas {
+    font-size: x-large;
+    text-align: center;
+    font-weight: 900;
+    width: 60em;
+}
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.language {
+    text-align: center;
+    cursor: pointer;
+}
+.language img {
+    width: 120px;
+    height: 80px;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+.language-name {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 1em;
+}
+.language-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 10px auto auto auto;
+}
+.language-info p {
+    color: #000;
+    line-height: 1.5;
+}
+#aleman-info {
+    border: 2px solid black;
+    color: black;
+}
+#hungaro-info {
+    border: 2px solid #456D4E;
+    color: #456D4E;
+}
+#turco-info {
+    border: 2px solid #DD0612;
+    color: #DD0612;
+}
+#ruso-info {
+    border: 2px solid blue;
+    color: blue;
+}
+#bulgaro-info {
+    border: 2px solid green;
+    color: green;
+}
+#romani-info {
+    border: 2px solid rgb(195, 1, 1);
+    color: rgb(195, 1, 1);
+}
+.idiprincipal {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.idisecundario    {
+    width: 60%;
+    margin: auto;
+}
+.txtidiprinci {
+    width: 20%;
+    text-align: justify;
+    min-width: 17em;
+}
+.imgidiprinci {
+    width: 50%;
+    text-align: justify;
+    min-width: 18em;
+    padding-top: 1em;
+}
+.idirumh2 {
+    text-align: left;
+    font-size: 2em;
+    width: 60%;
+    margin: auto auto 1em auto;
+}
+.frases-container {
+    max-width: 600px;
+    margin: 1em auto 1em auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+}
+
+.titulo-frases {
+    color: #333;
+    text-align: center;
+}
+
+.frases-list {
+    list-style: none;
+    padding: 0;
+}
+
+.frase-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.rumano {
+    font-style: italic;
+    color: #0066cc; /* Color azul para las frases en rumano */
+}
+.intro, .religión-info, .imgrelicrono {
+    flex: 1;
+}
+.intro {
+    background-color: #3399ff;
+    text-align: center;
+    border: solid 0.3em #000;
+    border-radius: 1em;
+    padding: 2em;
+    margin: 1em;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.religión-info {
+    background-color: #ff6666;
+    padding: 2em;
+    margin: 2em auto 2em auto;
+    border-radius: 1em;
+    border: 3px solid #ffea00;
+    width: 65vw;
+    min-width: 16em;
+}
+.religión-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333; /* Texto más oscuro para mayor contraste */
+}
+.religión-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #444; /* Texto más oscuro para mayor contraste */
+}
+.celebrations {
+    background-color: #ffe4b5;
+    padding: 1.5em;
+    margin: 2em auto 2em auto;
+    border-radius: 1em;
+    border: 3px solid #ff4500;
+    width: 65vw;
+    min-width: 16em;
+}
+
+.celebrations h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333; /* Texto más oscuro para mayor contraste */
+}
+.celebrations ul {
+    list-style-type: none;
+    padding: 0;
+}
+.celebrations li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+    color: #444; /* Texto más oscuro para mayor contraste */
+}
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.image-item {
+    background-color: rgba(0, 0, 255, 0.817);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 1em;
+}
+.image-item img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    min-width: 14em;
+}
+.image-item p {
+    font-size: 1.2em;
+    margin: 0;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.imgrelicrono {
+    margin: auto;
+}
+#imgramificacion    {
+    border: 3px ridge #cdcd00;
+    border-radius: 10px;
+    width: 30vw;
+    margin-bottom: 2em;
+    min-width: 17.5em;
+}
+.capa-superficial {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+}
+.capa-superficial2  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    zoom: 50%;
+}
+/*footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-column {
+    text-align: center;
+}
+.footer-left {
+    flex: 1;
+}
+.footer-center {
+    flex: 2;
+}
+.footer-right {
+    flex: 1;
+}
+.footer-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.aaa    {
+    font-weight: normal;
+    font-size: 1em;
+    color: yellowgreen;
+}
+.footer-text {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.html-icons {
+    display: flex;
+    justify-content: center;
+}
+.html-icons > img {
+    margin-right: 1em;
+    border-radius: 1em;
+}
+/* enlaces footer */
+.enlacepluriculturali, .enlacepluriculturali:visited {
+    color: yellow;
+}
+.enlacepluriculturali:hover, .enlacepluriculturali:active {
+    color: red;
+}
+
+/* media antiguo
+@media (max-width: 1746px) and (min-width: 1280px) {
+    nav {
+      font-size: 1.2vw;
+      padding: 0.5em;
+    }
+  
+    nav ul {
+      margin: 0;
+      padding: 0;
+    }
+  
+    nav li {
+      padding: 0.2em 0.5em;
+    }
+  
+    .nav-logo {
+      max-width: 80px;
+    }
+}*/
+
+.influenciarumana {
+    width: 80%;
+    margin: 2em auto auto auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    margin-top: 2em;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+.section {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff; /* Fondo blanco para las secciones */
+    color: #333; /* Texto general en tono oscuro */
+}
+
+#popular {
+    background-color: #FDD8D8; /* Tono rojo claro para la sección Popular */
+    padding: 0.5em;
+    width: 33%;
+    min-width: 14em;
+    margin: 0.5em auto 0.5em auto;
+}
+
+#deporte {
+    background-color: #FFE79E; /* Tono amarillo claro para la sección Deporte */
+    padding: 0.5em;
+    width: 33%;
+    min-width: 14em;
+    margin: 0.5em auto 0.5em auto;
+}
+
+#audiovisual {
+    background-color: #CCEBFF; /* Tono azul claro para la sección Audiovisual */
+    padding: 0.5em;
+    width: 33%;
+    min-width: 14em;
+    margin: 0.5em auto 0.5em auto;
+}
+
+.subtit {
+    font-size: 2em; /* Tamaño de fuente más grande para los subtítulos principales */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.inclunesubtit {
+    font-weight: bold;
+    margin-top: 15px; /* Mayor espacio entre subtítulos y el texto que les sigue */
+    margin: 2em 0.5em 0.5em 0.5em;
+}
+#popular .inclunesubtit {
+    color: #045304; /* Texto en tono complementario al fondo rojo claro */
+}
+
+#deporte .inclunesubtit {
+    color: #0046A8; /* Texto en tono complementario al fondo amarillo claro */
+}
+
+#audiovisual .inclunesubtit {
+    color: #6A3D01; /* Texto en tono complementario al fondo azul claro */
+}
+#deportistas span {
+    font-weight: bold; /* Puedes ajustar la negrita según tus preferencias */
+    color: #333; /* Puedes ajustar el color del texto según tus preferencias */
+    display: block;
+    text-align: center;
+    padding-bottom: 0.2em;
+}
+
+/* Media */
+/* Nav */
+
