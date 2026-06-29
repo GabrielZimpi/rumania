@@ -508,13 +508,10 @@ nav {
 }
 
 /* ===== POBLACIÓN Y CAPITAL ===== */
-.poblaciónycapital {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
-    align-items: flex-start;
-    justify-content: center;
+.poblaciónycapital { padding: 0; }
+
+.poblaciónycapital.activeFlex {
+    display: block !important;
 }
 
 .cincuentadiv {
@@ -1443,10 +1440,11 @@ nav {
 
 /* ===== RESPONSIVE ===== */
 
-/* Secciones redesño: grids responsivos */
+/* Secciones rediseño: grids responsivos */
 @media (max-width: 980px) {
-    .om-grid-2 { grid-template-columns: 1fr !important; }
-    .om-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+    .om-grid-2     { grid-template-columns: 1fr !important; }
+    .om-grid-4     { grid-template-columns: repeat(2, 1fr) !important; }
+    .om-grid-cities { grid-template-columns: 1fr !important; }
 }
 
 /* Tablet */

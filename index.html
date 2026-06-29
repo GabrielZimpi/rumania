@@ -194,58 +194,151 @@
 
         <!-- POBLACIÓN Y CAPITAL -->
         <div class="poblaciónycapital">
-            <div class="cincuentadiv">
-                <img src="imagenes/ciudadesprincipal.jpg" alt="Mapa con las Ciudades Principales de Rumanía" class="imgcapit">
-            </div>
-            <div class="cincuentadiv2">
-                <ul style="padding-left:0; margin-top:0.5rem;">
-                    <li class="region">Noreste
-                        <ul style="list-style:none; padding-left:1rem;">
-                            <li class="ciudad"><span class="txtresalt txtresaltpobl">Iași:</span> ciudad histórica y culturalmente rica, considerada la cuna de la cultura rumana. Alberga la Universidad Alexandru Ioan Cuza, fundada en 1860, la más antigua de Rumanía.</li>
-                        </ul>
-                    </li>
-                    <li class="region">Sureste
-                        <ul style="list-style:none; padding-left:1rem;">
-                            <li class="ciudad"><span class="txtresalt txtresaltpobl">Constanța:</span> principal puerto marítimo de Rumanía y puerta al Mar Negro. Centro económico y turístico famoso por sus playas y la Riviera del Mar Negro.</li>
-                        </ul>
-                    </li>
-                    <li class="region">Sur — Capital
-                        <ul style="list-style:none; padding-left:1rem;">
-                            <li class="ciudad"><span class="txtresalt txtresaltcap">Bucarest:</span> capital desde 1862. Conocida como el "París del Este" por su bulliciosa vida cultural. Mezcla de estilos neoclásico, art déco y soviético. La ciudad más próspera del país con 7.597 hab/km².</li>
-                        </ul>
-                    </li>
-                    <li class="region">Suroeste
-                        <ul style="list-style:none; padding-left:1rem;">
-                            <li class="ciudad"><span class="txtresalt txtresaltpobl">Craiova:</span> importante centro industrial y cultural. Conocida por su arquitectura histórica y el FC Universitatea Craiova.</li>
-                        </ul>
-                    </li>
-                    <li class="region">Oeste
-                        <ul style="list-style:none; padding-left:1rem;">
-                            <li class="ciudad"><span class="txtresalt txtresaltpobl">Timișoara:</span> ciudad multicultural, cuna de la Revolución de 1989. Primera ciudad de Europa iluminada con luz eléctrica (1884).</li>
-                        </ul>
-                    </li>
-                    <li class="region">Noroeste
-                        <ul style="list-style:none; padding-left:1rem;">
-                            <li class="ciudad"><span class="txtresalt txtresaltpobl">Cluj-Napoca:</span> capital informal de Transilvania. Vibrante vida universitaria y cultural, una de las ciudades más prósperas del país.</li>
-                        </ul>
-                    </li>
-                    <li class="region">Centro
-                        <ul style="list-style:none; padding-left:1rem;">
-                            <li class="ciudad"><span class="txtresalt txtresaltpobl">Brașov:</span> ciudad turística rodeada de los Cárpatos. Puerta a las estaciones de esquí de Poiana Brasov.</li>
-                            <li class="ciudad"><span class="txtresalt txtresaltpobl">Sibiu:</span> ciudad histórica medieval. Capital Europea de la Cultura en 2007. Festivals y casco antiguo bien conservado.</li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="datos-demograficos">
-                    <strong>Datos demográficos:</strong>
-                    <ul>
-                        <li>Población total: ~19,2 millones de habitantes (2023)</li>
-                        <li>Densidad media: ~80 hab/km²</li>
-                        <li>Tasa de urbanización: ~54%</li>
-                        <li>Esperanza de vida: 75,8 años</li>
-                    </ul>
+            <section style="padding: 0 32px 80px; max-width: 1280px; margin: 0 auto; width: 100%;">
+
+                <!-- Imagen + datos demográficos -->
+                <div class="om-grid-2" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; margin-bottom: 48px; align-items: start;">
+                    <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 3px; padding: 14px;">
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8A7A55; margin-bottom: 12px;">Harta orașelor · Mapa de ciudades</div>
+                        <img src="imagenes/ciudadesprincipal.jpg" alt="Mapa con las ciudades principales de Rumanía" style="width: 100%; display: block; border-radius: 2px;">
+                    </div>
+                    <div>
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A7A55; margin-bottom: 14px;">Date demografice · Datos demográficos</div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 18px;">
+                                <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; color: #002B7F; line-height: 1; letter-spacing: -0.02em;">19,2<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 3px;">M</span></div>
+                                <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5347; margin-top: 10px; font-weight: 500;">Población total</div>
+                            </div>
+                            <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 18px;">
+                                <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; color: #002B7F; line-height: 1; letter-spacing: -0.02em;">~80<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 3px;">hab/km²</span></div>
+                                <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5347; margin-top: 10px; font-weight: 500;">Densidad media</div>
+                            </div>
+                            <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 18px;">
+                                <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; color: #002B7F; line-height: 1; letter-spacing: -0.02em;">54<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 3px;">%</span></div>
+                                <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5347; margin-top: 10px; font-weight: 500;">Tasa de urbanización</div>
+                            </div>
+                            <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 18px;">
+                                <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; color: #002B7F; line-height: 1; letter-spacing: -0.02em;">75,8<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 3px;">años</span></div>
+                                <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5347; margin-top: 10px; font-weight: 500;">Esperanza de vida</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <!-- Encabezado ciudades -->
+                <div style="text-align: center; margin-bottom: 28px;">
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A7A55; margin-bottom: 10px;">Orașe principale · por región</div>
+                    <h3 style="font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; color: #1F1B16; margin: 0; letter-spacing: -0.02em;">Ciudades principales por región</h3>
+                </div>
+
+                <!-- Grid de ciudades -->
+                <div class="om-grid-cities" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;">
+
+                    <!-- CAPITAL -->
+                    <div style="background: #FFF5F5; border: 1px solid #F0C8C8; border-left: 4px solid #CE1126; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #CE1126; letter-spacing: -0.01em; line-height: 1;">Bucarest</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Sur — Capital</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Capital desde 1862, conocida como el «París del Este». Mezcla de arquitectura neoclásica, art déco y soviética. La ciudad más próspera del país, con 7.597 hab/km².</div>
+                    </div>
+
+                    <!-- NORESTE -->
+                    <div style="background: #F5F8FF; border: 1px solid #D0DCF5; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #002B7F; letter-spacing: -0.01em; line-height: 1;">Iași</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Noreste</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Cuna de la cultura rumana. Alberga la Universidad Alexandru Ioan Cuza, fundada en 1860, la más antigua de Rumanía. Gran centro estudiantil y cultural.</div>
+                    </div>
+
+                    <!-- SURESTE -->
+                    <div style="background: #F0FAFA; border: 1px solid #C0E5E5; border-left: 4px solid #007A7A; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #007A7A; letter-spacing: -0.01em; line-height: 1;">Constanța</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Sureste</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Principal puerto marítimo de Rumanía y puerta al Mar Negro. Centro económico y turístico, famoso por sus playas y la Riviera del Mar Negro.</div>
+                    </div>
+
+                    <div style="background: #F0FAFA; border: 1px solid #C0E5E5; border-left: 4px solid #007A7A; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #007A7A; letter-spacing: -0.01em; line-height: 1;">Tulcea</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Sureste</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Puerta al Delta del Danubio, Patrimonio de la Humanidad. Ciudad fluvial rodeada de canales, aves migratorias y paisajes únicos de Europa.</div>
+                    </div>
+
+                    <!-- CENTRO -->
+                    <div style="background: #F3FAF3; border: 1px solid #C0DCC0; border-left: 4px solid #2D6A2D; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #2D6A2D; letter-spacing: -0.01em; line-height: 1;">Brașov</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Centro — Transilvania</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Ciudad turística rodeada de los Cárpatos. Puerta a las estaciones de esquí de Poiana Brașov y al Castillo de Bran, el más visitado de Rumanía.</div>
+                    </div>
+
+                    <div style="background: #F3FAF3; border: 1px solid #C0DCC0; border-left: 4px solid #2D6A2D; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #2D6A2D; letter-spacing: -0.01em; line-height: 1;">Sibiu</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Centro — Transilvania</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Ciudad histórica medieval, Capital Europea de la Cultura en 2007. Casco antiguo sajón extraordinariamente conservado y vibrante escena de festivales.</div>
+                    </div>
+
+                    <!-- NOROESTE -->
+                    <div style="background: #FFFCF0; border: 1px solid #EDE5C0; border-left: 4px solid #8A6500; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #8A6500; letter-spacing: -0.01em; line-height: 1;">Cluj-Napoca</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Noroeste — Transilvania</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Capital informal de Transilvania. Vibrante vida universitaria y cultural, hub tecnológico en auge y una de las ciudades más prósperas y jóvenes del país.</div>
+                    </div>
+
+                    <div style="background: #FFFCF0; border: 1px solid #EDE5C0; border-left: 4px solid #8A6500; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #8A6500; letter-spacing: -0.01em; line-height: 1;">Oradea</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Noroeste</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Joya del Art Nouveau rumano, junto a la frontera con Hungría. Su centro histórico es considerado uno de los más bellos y mejor restaurados del país.</div>
+                    </div>
+
+                    <div style="background: #FFFCF0; border: 1px solid #EDE5C0; border-left: 4px solid #8A6500; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #8A6500; letter-spacing: -0.01em; line-height: 1;">Baia Mare</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Norte — Maramureș</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Capital del Maramureș, rodeada de montañas. Conocida por sus tradiciones rurales únicas, el arte del icono sobre vidrio y su acceso a los valles más auténticos de Rumanía.</div>
+                    </div>
+
+                    <!-- OESTE -->
+                    <div style="background: #F8F5FF; border: 1px solid #D8CCF0; border-left: 4px solid #6633AA; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #6633AA; letter-spacing: -0.01em; line-height: 1;">Timișoara</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Oeste — Banat</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Ciudad multicultural y cuna de la Revolución de 1989. Primera ciudad de Europa iluminada con luz eléctrica (1884). Capital Europea de la Cultura en 2023.</div>
+                    </div>
+
+                    <div style="background: #F8F5FF; border: 1px solid #D8CCF0; border-left: 4px solid #6633AA; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #6633AA; letter-spacing: -0.01em; line-height: 1;">Arad</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Oeste — Banat</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Ciudad cosmopolita junto al río Mureș, cerca de la frontera húngara. Importante nudo ferroviario y centro industrial con rica herencia multicultural.</div>
+                    </div>
+
+                    <!-- SUROESTE -->
+                    <div style="background: #FFF8F0; border: 1px solid #F0D8C0; border-left: 4px solid #B84A00; border-radius: 3px; padding: 22px 26px;">
+                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
+                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #B84A00; letter-spacing: -0.01em; line-height: 1;">Craiova</div>
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #8A7A55; white-space: nowrap;">Suroeste — Oltenia</div>
+                        </div>
+                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #4A4238;">Importante centro industrial y cultural de Oltenia. Conocida por su arquitectura histórica, la Universidad de Craiova y el FC Universitatea, uno de los clubes más históricos del país.</div>
+                    </div>
+
+                </div>
+            </section>
         </div>
 
         <!-- HISTORIA -->
