@@ -91,6 +91,14 @@ ul { list-style: none; }
     border-radius: 1px;
 }
 
+/* Colores de la bandera vía nth-child */
+.flag-mini span:nth-child(1),
+.footer-flag span:nth-child(1) { background: #002B7F; }
+.flag-mini span:nth-child(2),
+.footer-flag span:nth-child(2) { background: #FCD116; }
+.flag-mini span:nth-child(3),
+.footer-flag span:nth-child(3) { background: #CE1126; }
+
 .rotating-phrase {
     animation: phraseRoll 4.5s ease-in-out infinite;
     display: inline-block;
@@ -197,6 +205,8 @@ ul { list-style: none; }
     margin: 28px 32px 0;
     opacity: 0.7;
 }
+
+.om-cenefa--dim { opacity: 0.6; }
 
 /* ===== NAV ===== */
 nav {
@@ -454,6 +464,121 @@ nav {
     box-shadow: 0 8px 24px rgba(31,27,22,0.2);
 }
 
+/* ===== COMPONENTES COMPARTIDOS ===== */
+
+/* Wrapper de sección */
+.om-section {
+    padding: 0 32px 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Eyebrow / etiqueta mono */
+.om-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8A7A55;
+}
+.om-eyebrow--gold { color: rgb(252, 209, 22); }
+
+/* Cards base */
+.om-card {
+    background: #FFFCF4;
+    border: 1px solid #E8DEC7;
+    border-radius: 3px;
+}
+.om-card--blue-top {
+    border-top: 3px solid #002B7F;
+    padding: 24px 18px;
+    text-align: center;
+}
+.om-card--blue-left {
+    border-left: 4px solid #002B7F;
+    padding: 22px 18px;
+}
+
+/* Números de estadística */
+.om-stat-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #1F1B16;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+.om-stat-unit {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #8A7A55;
+    font-weight: 400;
+    margin-left: 4px;
+}
+.om-stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #5C5347;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Tarjetas de persona */
+.om-person-card {
+    background: #FFFCF4;
+    border: 1px solid rgb(232, 222, 199);
+    border-radius: 3px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.om-person-foto {
+    width: 86px;
+    height: 86px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.om-person-foto--gold { border: 3px solid rgb(252, 209, 22); }
+.om-person-foto--azul { border: 3px solid rgb(0, 43, 127); }
+.om-person-nombre {
+    font-family: Fraunces, serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(31, 27, 22);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+}
+.om-person-cargo {
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    color: rgb(92, 83, 71);
+    line-height: 1.5;
+}
+
+/* Dark box */
+.om-dark-box {
+    background: rgb(26, 20, 16);
+    color: rgb(232, 217, 176);
+    border-radius: 3px;
+}
+
+/* Grids — estilos base */
+.om-grid-2      { display: grid; }
+.om-grid-4      { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 40px; }
+.om-grid-3      { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.om-grid-cities { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.om-grid-demo   { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.om-grid-politica { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; }
+
+/* Variantes de om-grid-2 */
+.om-grid-2.geo-mapas { grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px; }
+.om-grid-2.pobl-main { grid-template-columns: 1.2fr 1fr; gap: 32px; margin-bottom: 48px; align-items: start; }
+
 /* ===== SECTION WRAPPERS ===== */
 .situacióngeográfica { padding: 0; }
 
@@ -483,10 +608,10 @@ nav {
 
 #mapaFrame {
     width: 100%;
-    height: 420px;
+    flex: 1;
+    min-height: 360px;
     border: none;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    border-radius: 2px;
 }
 
 .textimggeo {
@@ -506,6 +631,38 @@ nav {
     max-width: 860px;
     margin: 0 auto;
 }
+
+/* Geografía — tarjetas de mapa */
+.geo-mapa-card,
+.geo-iframe-card  { padding: 16px; }
+.geo-iframe-card  { display: flex; flex-direction: column; }
+.geo-mapa-card img { width: 100%; height: auto; display: block; border-radius: 2px; }
+.geo-mapa-card .om-eyebrow,
+.geo-iframe-card .om-eyebrow { margin-bottom: 12px; }
+
+/* Geografía — países limítrofes */
+.geo-limites {
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid #E8DEC7;
+    border-bottom: 1px solid #E8DEC7;
+    margin-bottom: 36px;
+}
+.geo-limites .om-eyebrow { margin-bottom: 14px; }
+.geo-paises { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.geo-pill {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #FFFCF4;
+    border: 1px solid #E8DEC7;
+    border-radius: 999px;
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    color: #1F1B16;
+}
+
+/* Geografía — stat reducido (238.397) */
+.geo-stat-sm { font-size: 32px; }
 
 /* ===== POBLACIÓN Y CAPITAL ===== */
 .poblaciónycapital { padding: 0; }
@@ -560,6 +717,96 @@ nav {
     padding-left: 1.2rem;
     color: var(--text-muted);
     margin-top: 0.4rem;
+}
+
+/* Población — mapa card */
+.pobl-mapa-card { padding: 14px; }
+.pobl-mapa-card img { width: 100%; display: block; border-radius: 2px; }
+.pobl-mapa-card .om-eyebrow { margin-bottom: 12px; }
+.pobl-demo-col .om-eyebrow  { margin-bottom: 14px; }
+
+/* Población — datos demográficos */
+.demo-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 34px;
+    color: #002B7F;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+.demo-unit {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #8A7A55;
+    font-weight: 400;
+    margin-left: 3px;
+}
+.demo-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #5C5347;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Población — encabezado ciudades */
+.ciudades-head { text-align: center; margin-bottom: 28px; }
+.ciudades-head .om-eyebrow { margin-bottom: 10px; }
+.ciudades-head__h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #1F1B16;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* Ciudad cards */
+.ciudad-card {
+    background: var(--ciudad-bg, #ddd);
+    border: 1px solid var(--ciudad-borde, #ccc);
+    border-left: 5px solid var(--ciudad-acento, #999);
+    border-radius: 3px;
+    padding: 22px 26px;
+}
+.r-bucuresti { --ciudad-bg: #99bb4f; --ciudad-borde: #7a9640; --ciudad-acento: #4e6128; --ciudad-txt: #1a2200; }
+.r-nordest   { --ciudad-bg: #45c5ec; --ciudad-borde: #3ab4d4; --ciudad-acento: #2090ae; --ciudad-txt: #09232e; }
+.r-sudest    { --ciudad-bg: #ddd566; --ciudad-borde: #bbb34a; --ciudad-acento: #807a28; --ciudad-txt: #2e2b00; }
+.r-centru    { --ciudad-bg: #F27884; --ciudad-borde: #d45e6e; --ciudad-acento: #a03848; --ciudad-txt: #2e0c00; }
+.r-nordvest  { --ciudad-bg: #c8adcc; --ciudad-borde: #a88aae; --ciudad-acento: #6e547a; --ciudad-txt: #1e0a28; }
+.r-vest      { --ciudad-bg: #efc586; --ciudad-borde: #d0a060; --ciudad-acento: #8a6428; --ciudad-txt: #2c1a00; }
+.r-sudvest   { --ciudad-bg: #3ad592; --ciudad-borde: #25b075; --ciudad-acento: #0e7048; --ciudad-txt: #022c14; }
+
+.ciudad-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+.ciudad-nombre {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--ciudad-txt);
+    letter-spacing: -0.01em;
+    line-height: 1;
+}
+.ciudad-reg {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: #0d0d0d;
+    white-space: nowrap;
+}
+.ciudad-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #0d0d0d;
 }
 
 /* ===== HISTORIA ===== */
@@ -635,8 +882,8 @@ nav {
 .tampolhist > ul > li {
     font-weight: 700;
     font-size: 1rem;
-    color: var(--azul);
-    margin-bottom: 1.5rem;
+    color: #003DA5;
+    margin-bottom: 1rem;
 }
 
 .hispolimgs {
@@ -676,90 +923,45 @@ nav {
     border: 1px solid #e8e0d0;
 }
 
+/* Historia — h2 estilos movidos desde inline */
+.historia-hitos h2 { color: var(--rojo); margin-bottom: 1rem; }
+
 /* ===== POLÍTICA ===== */
-.política {
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
+.política.activeFlex {
+    display: block !important;
 }
 
-.poliencabezado {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    align-items: flex-start;
+/* Política — componentes */
+.poli-eyebrow   { margin-bottom: 6px; }
+.poli-h3 {
+    font-family: Fraunces, serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: rgb(31, 27, 22);
+    margin: 0 0 18px;
+    letter-spacing: -0.02em;
 }
-
-.politizq {
-    flex: 1 1 280px;
-    min-width: 260px;
-}
-
-.poliact {
-    font-weight: 800;
-    font-size: 1.6rem;
-    color: var(--rojo);
-    margin-bottom: 0.8rem;
-}
-
-.politext {
-    font-size: 1rem;
+.poli-body {
+    font-family: Fraunces, serif;
+    font-size: 17px;
+    line-height: 1.75;
+    color: rgb(42, 37, 32);
     text-align: justify;
-    color: var(--text-muted);
-    line-height: 1.7;
 }
-
-.politdch {
-    flex: 1 1 280px;
+.poli-p { margin: 0 0 14px; }
+.poli-p:last-child { margin-bottom: 0; }
+.poli-strong-rojo { color: rgb(206, 17, 38); }
+.poli-col-dch { display: flex; flex-direction: column; gap: 16px; }
+.poli-dark { padding: 24px; }
+.poli-dark .om-eyebrow { margin-bottom: 12px; }
+.poli-dark-lista {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    min-width: 260px;
+    gap: 8px;
+    font-family: Inter, sans-serif;
+    font-size: 13.5px;
 }
-
-.subpolidch {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: #faf8f4;
-    border-radius: var(--radius);
-    padding: 1rem;
-    box-shadow: var(--shadow);
-}
-
-.president1 img,
-.president2 img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid var(--amarillo);
-    box-shadow: var(--shadow);
-    flex-shrink: 0;
-}
-
-.textdch,
-.textizq {
-    font-size: 0.95rem;
-    text-align: center;
-    color: var(--text-muted);
-}
-
-.hrpolimedio {
-    border: none;
-    border-top: 3px solid var(--amarillo);
-    margin: 1rem 0;
-}
-
-.polihisto {
-    text-align: center;
-    font-weight: 800;
-    font-size: 1.6rem;
-    color: var(--rojo);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1rem;
-}
+.poli-year { opacity: 0.6; }
 
 /* ===== SANIDAD ===== */
 .sanidad {
@@ -790,12 +992,58 @@ nav {
 
 .sanidtxt {
     flex: 1 1 280px;
-    min-width: 260px;
+    min-width: 0;
     font-size: 1rem;
     text-align: justify;
     line-height: 1.8;
     color: var(--text-muted);
     padding: 0 1rem;
+}
+
+/* Sanidad — tarjetas de estadística */
+.sani-stats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 18px;
+}
+.sani-stat {
+    flex: 1 1 140px;
+    min-width: 0;
+    background: rgb(255, 252, 244);
+    border-width: 1px 1px 1px 4px;
+    border-style: solid;
+    border-color: rgb(232, 222, 199) rgb(232, 222, 199) rgb(232, 222, 199) var(--sani-acento);
+    border-radius: 3px;
+    padding: 22px 24px;
+}
+.sani-stat--rojo { --sani-acento: rgb(206, 17, 38); --sani-color: rgb(206, 17, 38); }
+.sani-stat--azul { --sani-acento: rgb(0, 43, 127);  --sani-color: rgb(0, 43, 127); }
+.sani-stat__num {
+    font-family: Fraunces, serif;
+    font-weight: 500;
+    font-size: 46px;
+    color: var(--sani-color);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+.sani-stat__unit  { font-size: 24px; }
+.sani-stat__label {
+    font-family: Inter, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgb(92, 83, 71);
+    margin-top: 10px;
+    font-weight: 500;
+}
+.sani-stat__sub {
+    font-family: Fraunces, serif;
+    font-style: italic;
+    font-size: 13px;
+    color: rgb(138, 122, 85);
+    margin-top: 6px;
 }
 
 /* ===== EDUCACIÓN ===== */
@@ -873,6 +1121,51 @@ nav {
     transform: translateY(0);
 }
 
+/* Educación — bloque oscuro */
+.edu-dark {
+    background: rgb(26, 20, 16);
+    color: rgb(232, 217, 176);
+    border-radius: 3px;
+    padding: 36px 40px;
+    margin-top: 1.5rem;
+}
+.edu-dark .om-eyebrow { margin-bottom: 8px; }
+.edu-dark__h3 {
+    font-family: Fraunces, serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: rgb(251, 246, 236);
+    margin: 0 0 22px;
+    letter-spacing: -0.02em;
+}
+.edu-col__title {
+    font-family: Fraunces, serif;
+    font-style: italic;
+    font-size: 17px;
+    color: rgb(252, 209, 22);
+    margin-bottom: 6px;
+}
+.edu-col__text {
+    font-family: Inter, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.65;
+}
+.edu-col__num {
+    font-family: Fraunces, serif;
+    font-weight: 500;
+    font-size: 46px;
+    line-height: 1;
+    color: rgb(251, 246, 236);
+    letter-spacing: -0.02em;
+}
+.edu-col__unit { font-size: 22px; }
+.edu-col__sub {
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 8px;
+}
+
 /* ===== ECONOMÍA ===== */
 .economía {
     flex-direction: row;
@@ -927,6 +1220,8 @@ nav {
 }
 
 .econoul > li { margin-bottom: 0.3rem; }
+
+.txt-dark { color: #333; }
 
 .econo-media {
     display: flex;
@@ -1442,9 +1737,12 @@ nav {
 
 /* Secciones rediseño: grids responsivos */
 @media (max-width: 980px) {
-    .om-grid-2     { grid-template-columns: 1fr !important; }
-    .om-grid-4     { grid-template-columns: repeat(2, 1fr) !important; }
-    .om-grid-cities { grid-template-columns: 1fr !important; }
+    .om-grid-2       { grid-template-columns: 1fr !important; }
+    .om-grid-4       { grid-template-columns: repeat(2, 1fr) !important; }
+    .om-grid-cities  { grid-template-columns: 1fr !important; }
+    .om-grid-politica { grid-template-columns: 1fr !important; }
+    .om-grid-3       { grid-template-columns: repeat(2, 1fr) !important; }
+    .om-grid-demo    { grid-template-columns: 1fr !important; }
 }
 
 /* Tablet */
@@ -1485,7 +1783,13 @@ nav {
 
 /* Muy pequeño — grids rediseño */
 @media (max-width: 520px) {
-    .om-grid-4 { grid-template-columns: 1fr !important; }
+    .om-grid-4       { grid-template-columns: 1fr !important; }
+    .om-grid-3       { grid-template-columns: 1fr !important; }
+    .ciudad-reg      { white-space: normal !important; }
+    .ciudad-header   { flex-wrap: wrap; row-gap: 4px; }
+    .hispoltxts      { text-align: left; }
+    .om-section      { padding-left: 16px !important; padding-right: 16px !important; }
+    .edu-dark        { padding-left: 20px !important; padding-right: 20px !important; }
 }
 
 /* Móvil */

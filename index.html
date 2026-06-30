@@ -17,9 +17,9 @@
     <div class="utility-strip">
         <div class="utility-left">
             <span class="flag-mini">
-                <span style="background:#002B7F"></span>
-                <span style="background:#FCD116"></span>
-                <span style="background:#CE1126"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </span>
             <span id="rotatingPhrase" class="rotating-phrase">Bună!</span>
             <span class="utility-dot">·</span>
@@ -129,58 +129,57 @@
 
         <!-- SITUACIÓN GEOGRÁFICA -->
         <div class="situacióngeográfica">
-            <section style="padding: 0 32px 80px; max-width: 1280px; margin: 0 auto; width: 100%;">
+            <section class="om-section">
 
                 <!-- Mapa imagen + iframe -->
-                <div class="om-grid-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 36px;">
-                    <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 3px; padding: 16px;">
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8A7A55; margin-bottom: 12px;">Harta · El mapa</div>
-                        <img src="imagenes/geografia.png" alt="Mapa de Rumanía" style="width: 100%; height: auto; display: block; border-radius: 2px;">
+                <div class="om-grid-2 geo-mapas">
+                    <div class="om-card geo-mapa-card">
+                        <div class="om-eyebrow">Harta · El mapa</div>
+                        <img src="imagenes/geografia.png" alt="Mapa de Rumanía">
                     </div>
-                    <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 3px; padding: 16px; display: flex; flex-direction: column;">
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8A7A55; margin-bottom: 12px;">Google Maps</div>
+                    <div class="om-card geo-iframe-card">
+                        <div class="om-eyebrow">Google Maps</div>
                         <iframe id="mapaFrame"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611528.008190537!2d25.303546070307107!3d45.524161843813324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff26958976c3%3A0x84ef4f92a804b194!2zUnVtYW7DrWE!5e1!3m2!1ses!2ses!4v1702469645228!5m2!1ses!2ses"
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Mapa de Rumanía"
-                            style="width: 100%; flex: 1; min-height: 360px; border: none; border-radius: 2px;"></iframe>
+                            title="Mapa de Rumanía"></iframe>
                     </div>
                 </div>
 
                 <!-- Países limítrofes: pills -->
-                <div style="text-align: center; padding: 24px 0; border-top: 1px solid #E8DEC7; border-bottom: 1px solid #E8DEC7; margin-bottom: 36px;">
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A7A55; margin-bottom: 14px;">Țări vecine · Países limítrofes</div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
-                        <span style="display: inline-block; padding: 8px 18px; background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 999px; font-family: 'Fraunces', serif; font-size: 16px; color: #1F1B16;">Bulgaria</span>
-                        <span style="display: inline-block; padding: 8px 18px; background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 999px; font-family: 'Fraunces', serif; font-size: 16px; color: #1F1B16;">Serbia</span>
-                        <span style="display: inline-block; padding: 8px 18px; background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 999px; font-family: 'Fraunces', serif; font-size: 16px; color: #1F1B16;">Hungría</span>
-                        <span style="display: inline-block; padding: 8px 18px; background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 999px; font-family: 'Fraunces', serif; font-size: 16px; color: #1F1B16;">Ucrania</span>
-                        <span style="display: inline-block; padding: 8px 18px; background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 999px; font-family: 'Fraunces', serif; font-size: 16px; color: #1F1B16;">Moldavia</span>
-                        <span style="display: inline-block; padding: 8px 18px; background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 999px; font-family: 'Fraunces', serif; font-size: 16px; color: #1F1B16;">Mar Negro</span>
+                <div class="geo-limites">
+                    <div class="om-eyebrow">Țări vecine · Países limítrofes</div>
+                    <div class="geo-paises">
+                        <span class="geo-pill">Bulgaria</span>
+                        <span class="geo-pill">Serbia</span>
+                        <span class="geo-pill">Hungría</span>
+                        <span class="geo-pill">Ucrania</span>
+                        <span class="geo-pill">Moldavia</span>
+                        <span class="geo-pill">Mar Negro</span>
                     </div>
                 </div>
 
                 <!-- Tarjetas de datos -->
-                <div class="om-grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 40px;">
-                    <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-top: 3px solid #002B7F; border-radius: 3px; padding: 24px 18px; text-align: center;">
-                        <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 32px; color: #1F1B16; line-height: 1; letter-spacing: -0.02em;">238.397<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 4px;">km²</span></div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #5C5347; margin-top: 8px; font-weight: 500;">Superficie</div>
+                <div class="om-grid-4">
+                    <div class="om-card om-card--blue-top">
+                        <div class="om-stat-num geo-stat-sm">238.397<span class="om-stat-unit">km²</span></div>
+                        <div class="om-stat-label">Superficie</div>
                     </div>
-                    <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-top: 3px solid #002B7F; border-radius: 3px; padding: 24px 18px; text-align: center;">
-                        <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 36px; color: #1F1B16; line-height: 1; letter-spacing: -0.02em;">#12<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 4px;">EU</span></div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #5C5347; margin-top: 8px; font-weight: 500;">Posición en Europa</div>
+                    <div class="om-card om-card--blue-top">
+                        <div class="om-stat-num">#12<span class="om-stat-unit">EU</span></div>
+                        <div class="om-stat-label">Posición en Europa</div>
                     </div>
-                    <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-top: 3px solid #002B7F; border-radius: 3px; padding: 24px 18px; text-align: center;">
-                        <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 36px; color: #1F1B16; line-height: 1; letter-spacing: -0.02em;">245<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 4px;">km</span></div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #5C5347; margin-top: 8px; font-weight: 500;">Costa al Mar Negro</div>
+                    <div class="om-card om-card--blue-top">
+                        <div class="om-stat-num">245<span class="om-stat-unit">km</span></div>
+                        <div class="om-stat-label">Costa al Mar Negro</div>
                     </div>
-                    <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-top: 3px solid #002B7F; border-radius: 3px; padding: 24px 18px; text-align: center;">
-                        <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 36px; color: #1F1B16; line-height: 1; letter-spacing: -0.02em;">19,2<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 4px;">M</span></div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #5C5347; margin-top: 8px; font-weight: 500;">Hab. estimados</div>
+                    <div class="om-card om-card--blue-top">
+                        <div class="om-stat-num">19,2<span class="om-stat-unit">M</span></div>
+                        <div class="om-stat-label">Hab. estimados</div>
                     </div>
                 </div>
 
-                <!-- Texto (nuestro contenido y CSS) -->
+                <!-- Texto -->
                 <div class="geo-texto">
                     <p>Rumanía se encuentra en el sureste de Europa. Tiene una superficie de <span class="txtresalt">238.397 km²</span>, siendo el decimosegundo país más grande de Europa. Los <strong>Montes Cárpatos</strong> atraviesan el país en forma de arco, rodeados de extensas llanuras y una costa de 245 km sobre el <strong>Mar Negro</strong>.</p>
                     <br>
@@ -194,147 +193,147 @@
 
         <!-- POBLACIÓN Y CAPITAL -->
         <div class="poblaciónycapital">
-            <section style="padding: 0 32px 80px; max-width: 1280px; margin: 0 auto; width: 100%;">
+            <section class="om-section">
 
                 <!-- Imagen + datos demográficos -->
-                <div class="om-grid-2" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; margin-bottom: 48px; align-items: start;">
-                    <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-radius: 3px; padding: 14px;">
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase; color: #8A7A55; margin-bottom: 12px;">Harta orașelor · Mapa de ciudades</div>
-                        <img src="imagenes/ciudadesprincipal.jpg" alt="Mapa con las ciudades principales de Rumanía" style="width: 100%; display: block; border-radius: 2px;">
+                <div class="om-grid-2 pobl-main">
+                    <div class="om-card pobl-mapa-card">
+                        <div class="om-eyebrow">Harta orașelor · Mapa de ciudades</div>
+                        <img src="imagenes/ciudadesprincipal.jpg" alt="Mapa con las ciudades principales de Rumanía">
                     </div>
-                    <div>
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A7A55; margin-bottom: 14px;">Date demografice · Datos demográficos</div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                            <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 18px;">
-                                <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; color: #002B7F; line-height: 1; letter-spacing: -0.02em;">19,2<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 3px;">M</span></div>
-                                <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5347; margin-top: 10px; font-weight: 500;">Población total</div>
+                    <div class="pobl-demo-col">
+                        <div class="om-eyebrow">Date demografice · Datos demográficos</div>
+                        <div class="om-grid-demo">
+                            <div class="om-card om-card--blue-left">
+                                <div class="demo-num">19,2<span class="demo-unit">M</span></div>
+                                <div class="demo-label">Población total</div>
                             </div>
-                            <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 18px;">
-                                <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; color: #002B7F; line-height: 1; letter-spacing: -0.02em;">~80<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 3px;">hab/km²</span></div>
-                                <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5347; margin-top: 10px; font-weight: 500;">Densidad media</div>
+                            <div class="om-card om-card--blue-left">
+                                <div class="demo-num">~80<span class="demo-unit">hab/km²</span></div>
+                                <div class="demo-label">Densidad media</div>
                             </div>
-                            <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 18px;">
-                                <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; color: #002B7F; line-height: 1; letter-spacing: -0.02em;">54<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 3px;">%</span></div>
-                                <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5347; margin-top: 10px; font-weight: 500;">Tasa de urbanización</div>
+                            <div class="om-card om-card--blue-left">
+                                <div class="demo-num">54<span class="demo-unit">%</span></div>
+                                <div class="demo-label">Tasa de urbanización</div>
                             </div>
-                            <div style="background: #FFFCF4; border: 1px solid #E8DEC7; border-left: 4px solid #002B7F; border-radius: 3px; padding: 22px 18px;">
-                                <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 34px; color: #002B7F; line-height: 1; letter-spacing: -0.02em;">75,8<span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #8A7A55; font-weight: 400; margin-left: 3px;">años</span></div>
-                                <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #5C5347; margin-top: 10px; font-weight: 500;">Esperanza de vida</div>
+                            <div class="om-card om-card--blue-left">
+                                <div class="demo-num">75,8<span class="demo-unit">años</span></div>
+                                <div class="demo-label">Esperanza de vida</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Encabezado ciudades -->
-                <div style="text-align: center; margin-bottom: 28px;">
-                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #8A7A55; margin-bottom: 10px;">Orașe principale · por región</div>
-                    <h3 style="font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; color: #1F1B16; margin: 0; letter-spacing: -0.02em;">Ciudades principales por región</h3>
+                <div class="ciudades-head">
+                    <div class="om-eyebrow">Orașe principale · por región</div>
+                    <h3 class="ciudades-head__h3">Ciudades principales por región</h3>
                 </div>
 
                 <!-- Grid de ciudades -->
-                <div class="om-grid-cities" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;">
+                <div class="om-grid-cities">
 
-                    <!-- BUCUREȘTI-ILFOV · #99bb4f -->
-                    <div style="background: #99bb4f; border: 1px solid #7a9640; border-left: 5px solid #4e6128; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #1a2200; letter-spacing: -0.01em; line-height: 1;">Bucarest</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">București-Ilfov · Capital</div>
+                    <!-- BUCUREȘTI-ILFOV -->
+                    <div class="ciudad-card r-bucuresti">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Bucarest</div>
+                            <div class="ciudad-reg">București-Ilfov · Capital</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Capital desde 1862, conocida como el «París del Este». Mezcla de arquitectura neoclásica, art déco y soviética. La ciudad más próspera del país, con 7.597 hab/km².</div>
+                        <div class="ciudad-desc">Capital desde 1862, conocida como el «París del Este». Mezcla de arquitectura neoclásica, art déco y soviética. La ciudad más próspera del país, con 7.597 hab/km².</div>
                     </div>
 
-                    <!-- NORD-EST · #38aacc -->
-                    <div style="background: #45c5ec; border: 1px solid #3ab4d4; border-left: 5px solid #2090ae; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #09232e; letter-spacing: -0.01em; line-height: 1;">Iași</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Nord-Est · Noreste</div>
+                    <!-- NORD-EST -->
+                    <div class="ciudad-card r-nordest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Iași</div>
+                            <div class="ciudad-reg">Nord-Est · Noreste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Cuna de la cultura rumana. Alberga la Universidad Alexandru Ioan Cuza, fundada en 1860, la más antigua de Rumanía. Gran centro estudiantil y cultural.</div>
+                        <div class="ciudad-desc">Cuna de la cultura rumana. Alberga la Universidad Alexandru Ioan Cuza, fundada en 1860, la más antigua de Rumanía. Gran centro estudiantil y cultural.</div>
                     </div>
 
-                    <!-- SUD-EST · #ddd566 -->
-                    <div style="background: #ddd566; border: 1px solid #bbb34a; border-left: 5px solid #807a28; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #2e2b00; letter-spacing: -0.01em; line-height: 1;">Constanța</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Sud-Est · Sureste</div>
+                    <!-- SUD-EST -->
+                    <div class="ciudad-card r-sudest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Constanța</div>
+                            <div class="ciudad-reg">Sud-Est · Sureste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Principal puerto marítimo de Rumanía y puerta al Mar Negro. Centro económico y turístico, famoso por sus playas y la Riviera del Mar Negro.</div>
+                        <div class="ciudad-desc">Principal puerto marítimo de Rumanía y puerta al Mar Negro. Centro económico y turístico, famoso por sus playas y la Riviera del Mar Negro.</div>
                     </div>
 
-                    <div style="background: #ddd566; border: 1px solid #bbb34a; border-left: 5px solid #807a28; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #2e2b00; letter-spacing: -0.01em; line-height: 1;">Tulcea</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Sud-Est · Sureste</div>
+                    <div class="ciudad-card r-sudest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Tulcea</div>
+                            <div class="ciudad-reg">Sud-Est · Sureste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Puerta al Delta del Danubio, Patrimonio de la Humanidad. Ciudad fluvial rodeada de canales, aves migratorias y paisajes únicos de Europa.</div>
+                        <div class="ciudad-desc">Puerta al Delta del Danubio, Patrimonio de la Humanidad. Ciudad fluvial rodeada de canales, aves migratorias y paisajes únicos de Europa.</div>
                     </div>
 
-                    <!-- CENTRU · #d47966 -->
-                    <div style="background: #F27884; border: 1px solid #d45e6e; border-left: 5px solid #a03848; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #2e0c00; letter-spacing: -0.01em; line-height: 1;">Brașov</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Centru · Centro</div>
+                    <!-- CENTRU -->
+                    <div class="ciudad-card r-centru">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Brașov</div>
+                            <div class="ciudad-reg">Centru · Centro</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Ciudad turística rodeada de los Cárpatos. Puerta a las estaciones de esquí de Poiana Brașov y al Castillo de Bran, el más visitado de Rumanía.</div>
+                        <div class="ciudad-desc">Ciudad turística rodeada de los Cárpatos. Puerta a las estaciones de esquí de Poiana Brașov y al Castillo de Bran, el más visitado de Rumanía.</div>
                     </div>
 
-                    <div style="background: #F27884; border: 1px solid #d45e6e; border-left: 5px solid #a03848; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #2e0c00; letter-spacing: -0.01em; line-height: 1;">Sibiu</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Centru · Centro</div>
+                    <div class="ciudad-card r-centru">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Sibiu</div>
+                            <div class="ciudad-reg">Centru · Centro</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Ciudad histórica medieval, Capital Europea de la Cultura en 2007. Casco antiguo sajón extraordinariamente conservado y vibrante escena de festivales.</div>
+                        <div class="ciudad-desc">Ciudad histórica medieval, Capital Europea de la Cultura en 2007. Casco antiguo sajón extraordinariamente conservado y vibrante escena de festivales.</div>
                     </div>
 
-                    <!-- NORD-VEST · #c8adcc -->
-                    <div style="background: #c8adcc; border: 1px solid #a88aae; border-left: 5px solid #6e547a; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #1e0a28; letter-spacing: -0.01em; line-height: 1;">Cluj-Napoca</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Nord-Vest · Noroeste</div>
+                    <!-- NORD-VEST -->
+                    <div class="ciudad-card r-nordvest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Cluj-Napoca</div>
+                            <div class="ciudad-reg">Nord-Vest · Noroeste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Capital informal de Transilvania. Vibrante vida universitaria y cultural, hub tecnológico en auge y una de las ciudades más prósperas y jóvenes del país.</div>
+                        <div class="ciudad-desc">Capital informal de Transilvania. Vibrante vida universitaria y cultural, hub tecnológico en auge y una de las ciudades más prósperas y jóvenes del país.</div>
                     </div>
 
-                    <div style="background: #c8adcc; border: 1px solid #a88aae; border-left: 5px solid #6e547a; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #1e0a28; letter-spacing: -0.01em; line-height: 1;">Oradea</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Nord-Vest · Noroeste</div>
+                    <div class="ciudad-card r-nordvest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Oradea</div>
+                            <div class="ciudad-reg">Nord-Vest · Noroeste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Joya del Art Nouveau rumano, junto a la frontera con Hungría. Su centro histórico es considerado uno de los más bellos y mejor restaurados del país.</div>
+                        <div class="ciudad-desc">Joya del Art Nouveau rumano, junto a la frontera con Hungría. Su centro histórico es considerado uno de los más bellos y mejor restaurados del país.</div>
                     </div>
 
-                    <div style="background: #c8adcc; border: 1px solid #a88aae; border-left: 5px solid #6e547a; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #1e0a28; letter-spacing: -0.01em; line-height: 1;">Baia Mare</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Nord-Vest · Noroeste</div>
+                    <div class="ciudad-card r-nordvest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Baia Mare</div>
+                            <div class="ciudad-reg">Nord-Vest · Noroeste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Capital del Maramureș, rodeada de montañas. Conocida por sus tradiciones rurales únicas, el arte del icono sobre vidrio y su acceso a los valles más auténticos de Rumanía.</div>
+                        <div class="ciudad-desc">Capital del Maramureș, rodeada de montañas. Conocida por sus tradiciones rurales únicas, el arte del icono sobre vidrio y su acceso a los valles más auténticos de Rumanía.</div>
                     </div>
 
-                    <!-- VEST · #efc586 -->
-                    <div style="background: #efc586; border: 1px solid #d0a060; border-left: 5px solid #8a6428; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #2c1a00; letter-spacing: -0.01em; line-height: 1;">Timișoara</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Vest · Oeste</div>
+                    <!-- VEST -->
+                    <div class="ciudad-card r-vest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Timișoara</div>
+                            <div class="ciudad-reg">Vest · Oeste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Ciudad multicultural y cuna de la Revolución de 1989. Primera ciudad de Europa iluminada con luz eléctrica (1884). Capital Europea de la Cultura en 2023.</div>
+                        <div class="ciudad-desc">Ciudad multicultural y cuna de la Revolución de 1989. Primera ciudad de Europa iluminada con luz eléctrica (1884). Capital Europea de la Cultura en 2023.</div>
                     </div>
 
-                    <div style="background: #efc586; border: 1px solid #d0a060; border-left: 5px solid #8a6428; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #2c1a00; letter-spacing: -0.01em; line-height: 1;">Arad</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Vest · Oeste</div>
+                    <div class="ciudad-card r-vest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Arad</div>
+                            <div class="ciudad-reg">Vest · Oeste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Ciudad cosmopolita junto al río Mureș, cerca de la frontera húngara. Importante nudo ferroviario y centro industrial con rica herencia multicultural.</div>
+                        <div class="ciudad-desc">Ciudad cosmopolita junto al río Mureș, cerca de la frontera húngara. Importante nudo ferroviario y centro industrial con rica herencia multicultural.</div>
                     </div>
 
-                    <!-- SUD-VEST OLTENIA · #3ad592 -->
-                    <div style="background: #3ad592; border: 1px solid #25b075; border-left: 5px solid #0e7048; border-radius: 3px; padding: 22px 26px;">
-                        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;">
-                            <div style="font-family: 'Fraunces', serif; font-weight: 500; font-size: 24px; color: #022c14; letter-spacing: -0.01em; line-height: 1;">Craiova</div>
-                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.20em; text-transform: uppercase; color: #0d0d0d; white-space: nowrap;">Sud-Vest Oltenia · Suroeste</div>
+                    <!-- SUD-VEST OLTENIA -->
+                    <div class="ciudad-card r-sudvest">
+                        <div class="ciudad-header">
+                            <div class="ciudad-nombre">Craiova</div>
+                            <div class="ciudad-reg">Sud-Vest Oltenia · Suroeste</div>
                         </div>
-                        <div style="font-family: 'Inter', sans-serif; font-size: 13.5px; line-height: 1.6; color: #0d0d0d;">Importante centro industrial y cultural de Oltenia. Conocida por su arquitectura histórica, la Universidad de Craiova y el FC Universitatea, uno de los clubes más históricos del país.</div>
+                        <div class="ciudad-desc">Importante centro industrial y cultural de Oltenia. Conocida por su arquitectura histórica, la Universidad de Craiova y el FC Universitatea, uno de los clubes más históricos del país.</div>
                     </div>
 
                 </div>
@@ -345,8 +344,8 @@
         <div class="historia">
             <div class="historia-hitos">
                 <div class="tresdivtext">
-                    <h2 style="color:#CC0000; margin-bottom:1rem;">Hitos — Antigüedad y Monarquía</h2>
-                    <ul style="list-style:none; padding:0;">
+                    <h2>Hitos — Antigüedad y Monarquía</h2>
+                    <ul>
                         <li class="espacioli">Principados de Moldavia y Valaquia (s. XIV): primeros estados rumanos independientes.</li>
                         <li class="espacioli"><span class="txtresalt">Primera Constitución</span> (1 de julio de 1866): Principado de Rumanía con monarca extranjero.</li>
                         <li class="espacioli">Independencia oficial reconocida por el Tratado de Berlín (1878).</li>
@@ -359,8 +358,8 @@
                     <img src="imagenes/historia.jpg" alt="Corona real de Rumanía">
                 </div>
                 <div class="tresdivtext2">
-                    <h2 style="color:#CC0000; margin-bottom:1rem;">Comunismo, Revolución y Democracia</h2>
-                    <ul style="list-style:none; padding:0;">
+                    <h2>Comunismo, Revolución y Democracia</h2>
+                    <ul>
                         <li class="espacioli">Segunda Guerra Mundial: ocupación del Eje y pérdida de territorios.</li>
                         <li class="espacioli"><span class="txtresalt">Primera Constitución Comunista</span> (13 de abril de 1948): estado socialista bajo Ceaușescu.</li>
                         <li class="espacioli"><span class="txtresalt">Segunda Constitución Comunista</span> (21 de agosto de 1965): consolidación del control totalitario.</li>
@@ -375,8 +374,8 @@
                 <h2>Línea de Tiempo Política</h2>
                 <div class="polihislist">
                     <div class="tampolhist">
-                        <ul style="list-style:none; padding:0;">
-                            <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Reinado de Carol I (1866–1914)
+                        <ul>
+                            <li>Reinado de Carol I (1866–1914)
                                 <ul class="nostyle">
                                     <li>
                                         <div class="hispolimgs"><img src="imagenes/carol1.jpg" alt="Carol I"></div>
@@ -384,7 +383,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Entreguerras (1918–1939)
+                            <li>Entreguerras (1918–1939)
                                 <ul class="nostyle">
                                     <li>
                                         <div class="hispolimgs"><img src="imagenes/grandepresion.jpg" alt="Gran Depresión"></div>
@@ -392,7 +391,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Dictadura de Carol II (1938–1940)
+                            <li>Dictadura de Carol II (1938–1940)
                                 <ul class="nostyle">
                                     <li>
                                         <div class="hispolimgs"><img src="imagenes/carol2.jpg" alt="Carol II"></div>
@@ -403,8 +402,8 @@
                         </ul>
                     </div>
                     <div class="tampolhist">
-                        <ul style="list-style:none; padding:0;">
-                            <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">IIGM y Comunismo (1940–1989)
+                        <ul>
+                            <li>IIGM y Comunismo (1940–1989)
                                 <ul class="nostyle">
                                     <li>
                                         <div class="hispolimgs"><img src="imagenes/comunismo.jpg" alt="Comunismo en Rumanía"></div>
@@ -412,7 +411,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Revolución de 1989
+                            <li>Revolución de 1989
                                 <ul class="nostyle">
                                     <li>
                                         <div class="hispolimgs"><img src="imagenes/revolucion.jpg" alt="Revolución Rumana"></div>
@@ -420,7 +419,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Democracia e integración europea
+                            <li>Democracia e integración europea
                                 <ul class="nostyle">
                                     <li>
                                         <div class="hispolimgs"><img src="imagenes/rumaniaotan.jpg" alt="OTAN"></div>
@@ -435,102 +434,45 @@
         </div>
 
         <!-- POLÍTICA -->
-        <div class="política">
-            <div class="poliencabezado">
-                <div class="politizq">
-                    <div class="poliact">Política actual</div>
-                    <div class="politext">
-                        La política rumana es similar a la española en cuanto a su estructura. La principal diferencia es que Rumanía no cuenta con monarquía: mientras España es una <strong>monarquía parlamentaria</strong>, Rumanía es una <span class="txtresalt2">república parlamentaria</span>.
-                        <br><br>
-                        El poder ejecutivo lo comparten el <strong>Presidente de la República</strong> (elegido por sufragio directo cada 5 años) y el <strong>Primer Ministro</strong>. El Parlamento es bicameral: <strong>Cámara de Diputados</strong> y <strong>Senado</strong>.
-                        <br><br>
-                        Klaus Werner Iohannis ocupó la presidencia desde el 21 de diciembre de 2014 hasta enero de 2025, con apoyo del PNL. Rumanía es miembro de la UE, la OTAN y el Consejo de Europa.
-                    </div>
-                </div>
-                <div class="politdch">
-                    <div class="subpolidch">
-                        <div class="president1">
-                            <img class="imagen-redonda" src="imagenes/president1.jpg" alt="Klaus Iohannis">
-                        </div>
-                        <div class="textdch">
-                            <strong>Klaus Iohannis</strong><br><br>
-                            Presidente desde el 21 de diciembre de 2014
-                        </div>
-                    </div>
-                    <div class="subpolidch">
-                        <div class="textizq">
-                            Visita y almuerzo en el Palacio Real<br><br>
-                            13 de julio de 2015
-                        </div>
-                        <div class="president2">
-                            <img class="imagen-redonda" src="imagenes/president2.jpg" alt="Klaus Iohannis con el Rey de España">
-                        </div>
-                    </div>
-                </div>
+        <section class="política om-section">
+          <div class="om-grid-politica">
+            <div>
+              <div class="om-eyebrow poli-eyebrow">Politică actuală</div>
+              <h3 class="poli-h3">República parlamentaria</h3>
+              <div class="poli-body">
+                <p class="poli-p">La política rumana es similar a la española en cuanto a su estructura. La principal diferencia es que Rumanía no cuenta con monarquía: mientras España es una <strong>monarquía parlamentaria</strong>, Rumanía es una <strong class="poli-strong-rojo">república parlamentaria</strong>.</p>
+                <p class="poli-p">El poder ejecutivo lo comparten el <strong>Presidente de la República</strong> (elegido por sufragio directo cada 5 años) y el <strong>Primer Ministro</strong>, designado por el presidente y ratificado por el Parlamento.</p>
+                <p class="poli-p">El Parlamento es bicameral, compuesto por la <strong>Cámara de Diputados</strong> y el <strong>Senado</strong>. Los principales partidos son el PSD (socialdemócrata) y el PNL (liberal).</p>
+                <p class="poli-p">Klaus Werner Iohannis ocupó la presidencia desde el 21 de diciembre de 2014 hasta enero de 2025, con el apoyo del PNL. Rumanía es miembro de la UE, la OTAN y el Consejo de Europa.</p>
+              </div>
             </div>
-
-            <hr class="hrpolimedio">
-
-            <div class="polihisto">Línea de Tiempo</div>
-            <div class="polihislist">
-                <div class="tampolhist">
-                    <ul style="list-style:none; padding:0;">
-                        <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Reinado de Carol I (1866–1914)
-                            <ul class="nostyle">
-                                <li>
-                                    <div class="hispolimgs"><img src="imagenes/carol1.jpg" alt="Carol I"></div>
-                                    <div class="hispoltxts">Carol I modernizó Rumanía y proclamó el <span class="txtresalt3">Reino de Rumanía</span> en 1881. Impulsó la industria y las comunicaciones.</div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Entreguerras (1918–1939)
-                            <ul class="nostyle">
-                                <li>
-                                    <div class="hispolimgs"><img src="imagenes/grandepresion.jpg" alt="Gran Depresión"></div>
-                                    <div class="hispoltxts">Gran Rumanía unificada. La <span class="txtresalt3">Gran Depresión</span> genera inestabilidad. Auge de movimientos ultranacionalistas.</div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Dictadura de Carol II (1938–1940)
-                            <ul class="nostyle">
-                                <li>
-                                    <div class="hispolimgs"><img src="imagenes/carol2.jpg" alt="Carol II"></div>
-                                    <div class="hispoltxts">Carol II <span class="txtresalt3">instauró una dictadura personal</span>. En 1940 abdicó bajo presiones del Eje y la URSS.</div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+            <div class="poli-col-dch">
+              <div class="om-person-card">
+                <img src="imagenes/president1.jpg" alt="Klaus Iohannis" class="om-person-foto om-person-foto--gold">
+                <div>
+                  <div class="om-person-nombre">Klaus Iohannis</div>
+                  <div class="om-person-cargo">Presidente desde el 21 de diciembre de 2014</div>
                 </div>
-                <div class="tampolhist">
-                    <ul style="list-style:none; padding:0;">
-                        <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">IIGM y Comunismo (1940–1989)
-                            <ul class="nostyle">
-                                <li>
-                                    <div class="hispolimgs"><img src="imagenes/comunismo.jpg" alt="Comunismo"></div>
-                                    <div class="hispoltxts">Aliada del Eje, luego <span class="txtresalt3">cae bajo la órbita soviética</span>. Ceaușescu gobierna con régimen represivo hasta 1989.</div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Revolución de 1989
-                            <ul class="nostyle">
-                                <li>
-                                    <div class="hispolimgs"><img src="imagenes/revolucion.jpg" alt="Revolución"></div>
-                                    <div class="hispoltxts"><span class="txtresalt3">La Revolución de 1989</span> derrocó el régimen. Ceaușescu fue ejecutado el 25 de diciembre.</div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li style="color:#003DA5; font-weight:700; margin-bottom:1rem;">Democracia y UE (1991–actualidad)
-                            <ul class="nostyle">
-                                <li>
-                                    <div class="hispolimgs"><img src="imagenes/rumaniaotan.jpg" alt="OTAN"></div>
-                                    <div class="hispoltxts">Ingreso a la <span class="txtresalt3">OTAN (2004)</span> y la <span class="txtresalt3">UE (2007)</span>. República parlamentaria con economía en crecimiento.</div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+              </div>
+              <div class="om-person-card">
+                <img src="imagenes/president2.jpg" alt="Visita oficial al Palacio Real" class="om-person-foto om-person-foto--azul">
+                <div>
+                  <div class="om-person-nombre">Vizită la Madrid</div>
+                  <div class="om-person-cargo">Visita y almuerzo en el Palacio Real · 13 de julio de 2015</div>
                 </div>
+              </div>
+              <div class="om-dark-box poli-dark">
+                <div class="om-eyebrow om-eyebrow--gold">Aparține de</div>
+                <div class="poli-dark-lista">
+                  <div>· Unión Europea <span class="poli-year">(2007)</span></div>
+                  <div>· OTAN <span class="poli-year">(2004)</span></div>
+                  <div>· Consejo de Europa</div>
+                  <div>· Naciones Unidas</div>
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </section>
 
         <!-- SANIDAD -->
         <div class="sanidad">
@@ -550,6 +492,17 @@
                 <strong>Desafíos actuales:</strong> importante <span class="txtresalt4">emigración de profesionales sanitarios</span> hacia otros países de la UE, lo que genera escasez en zonas rurales. El gasto en sanidad es del <span class="txtresalt4">5,2% del PIB</span>, por debajo de la media europea (~9,9%).
                 <br><br>
                 Antes de la Segunda Guerra Mundial existían hospitales públicos (atención gratuita o a bajo costo) y privados (pago directo), con los costes corriendo a cargo del paciente.
+                <div class="sani-stats">
+                  <div class="sani-stat sani-stat--rojo">
+                    <div class="sani-stat__num">5,2<span class="sani-stat__unit">%</span></div>
+                    <div class="sani-stat__label">Gasto en sanidad — % del PIB</div>
+                    <div class="sani-stat__sub">Media UE: ~9,9 % · España: ~10 %</div>
+                  </div>
+                  <div class="sani-stat sani-stat--azul">
+                    <div class="sani-stat__num">1999</div>
+                    <div class="sani-stat__label">Año del sistema actual</div>
+                  </div>
+                </div>
             </div>
             <div class="saniimg">
                 <div class="imgsanidch"><img src="imagenes/sanidad/hospital5.jpg" alt="Habitación de hospital"></div>
@@ -577,11 +530,24 @@
                         <p class="paragraph"><strong>Ciclo Superior (Liceu, opcional):</strong> Clases IX–XII; edades de 15–16 a 18–19 años.</p>
                     </div>
                 </div>
-                <div class="animate-text" style="margin-top:1.5rem; padding:1.2rem; background:#f0f7ff; border-radius:8px; border-left:4px solid #003DA5;">
-                    <h2 class="subtitle" style="text-align:left; color:#003DA5;">Después de la secundaria:</h2>
-                    <p class="paragraph"><span class="txtresalt">Educación Superior:</span> se accede superando el examen <strong>"Bacalaureat"</strong>. Más de 90 universidades, siendo la de Bucarest y la Babeș-Bolyai de Cluj-Napoca las más prestigiosas.</p>
-                    <p class="paragraph"><span class="txtresalt">Formación Profesional:</span> muy diversa. En la mayoría de los casos se requiere haber superado el Liceu.</p>
-                    <p class="paragraph"><span class="txtresalt">Tasa de alfabetización:</span> 98,8% de la población mayor de 15 años.</p>
+                <div class="edu-dark">
+                  <div class="om-eyebrow om-eyebrow--gold">După liceu · Después del Liceu</div>
+                  <h3 class="edu-dark__h3">Acceso a la universidad</h3>
+                  <div class="om-grid-3">
+                    <div>
+                      <div class="edu-col__title">Educación Superior</div>
+                      <div class="edu-col__text">Para acceder se debe superar el examen nacional <strong>"Bacalaureat"</strong>. Rumanía cuenta con más de 90 universidades, siendo la de Bucarest y la Babeș-Bolyai de Cluj-Napoca las más prestigiosas.</div>
+                    </div>
+                    <div>
+                      <div class="edu-col__title">Formación Profesional</div>
+                      <div class="edu-col__text">Muy diversa según la especialidad. En la mayoría de los casos se requiere haber superado el Liceu. Rumanía está modernizando este sistema para alinearlo con los estándares europeos.</div>
+                    </div>
+                    <div>
+                      <div class="edu-col__title">Alfabetización</div>
+                      <div class="edu-col__num">98,8<span class="edu-col__unit">%</span></div>
+                      <div class="edu-col__sub">población mayor de 15 años</div>
+                    </div>
+                  </div>
                 </div>
                 <div class="edu-bottom animate-text">
                     <div class="eduimgizq">
@@ -621,7 +587,7 @@
             <div class="econodch">
                 Rumanía <span class="txtresalt4">produce casi de todo</span>, tanto para uso propio como para exportación. <span class="txtresalt4">Históricamente</span> ha destacado en agricultura, ganadería, industria petrolera, petroquímica, textil, siderúrgica y energía hidroeléctrica.
                 <br><br>
-                <strong style="color:#333;">Principales productos exportados:</strong>
+                <strong class="txt-dark">Principales productos exportados:</strong>
                 <br><br>
                 <ul class="econoul">
                     <li>Calzado → Alemania, Italia, Francia, España</li>
@@ -877,7 +843,7 @@
     </main>
 
     <!-- FOOTER NUEVO -->
-    <div class="om-cenefa" style="opacity:0.6;"></div>
+    <div class="om-cenefa om-cenefa--dim"></div>
     <footer class="footer-nueva">
         <div class="footer-nueva-grid">
             <div class="footer-nueva-left">
@@ -886,9 +852,9 @@
             </div>
             <div class="footer-nueva-center">
                 <div class="footer-flag">
-                    <span style="background:#002B7F"></span>
-                    <span style="background:#FCD116"></span>
-                    <span style="background:#CE1126"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <div class="footer-flag-label">Tricolorul</div>
             </div>
