@@ -16,7 +16,7 @@
     <!-- UTILITY STRIP -->
     <div class="utility-strip">
         <div class="utility-left">
-            <span class="flag-mini">
+            <span class="flag-mini" onclick="verPortada()" title="Ir a portada">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -41,7 +41,7 @@
                 <span>Retrato de un país · Portret al unei țări</span>
                 <span class="eyebrow-line"></span>
             </div>
-            <h1 class="masthead-h1">Rom<span class="h1-accent">â</span>nia</h1>
+            <h1 class="masthead-h1" onclick="verPortada()" title="Ir a portada">Rom<span class="h1-accent">â</span>nia</h1>
             <p class="masthead-tagline">Una mirada cálida a un país de Cárpatos, monasterios pintados, café fuerte y lengua latina al borde del Mar Negro.</p>
         </header>
     </div>
@@ -100,7 +100,7 @@
                 <span class="portada-label-main">49 fețe ale unei țări <span class="portada-dot">·</span> 49 caras de un país</span>
                 <span class="portada-label-sub">Mosaic viu · actualizare la 2s</span>
             </div>
-            <div class="portada" id="mosaicGrid">
+            <div class="portada">
                 <div class="imgporta"></div><div class="imgporta"></div><div class="imgporta"></div>
                 <div class="imgporta"></div><div class="imgporta"></div><div class="imgporta"></div>
                 <div class="imgporta"></div><div class="imgporta"></div><div class="imgporta"></div>
@@ -114,7 +114,7 @@
             </div>
             <div class="portada-footer-bar">
                 <span class="portada-footer-line"></span>
-                <span>↓ &nbsp; navega por las secciones desde el menú &nbsp; ↓</span>
+                <span>↑ &nbsp; navega por las secciones desde el menú &nbsp; ↑</span>
                 <span class="portada-footer-line"></span>
             </div>
         </div>
@@ -762,83 +762,140 @@
         </div>
 
         <!-- INFLUENCIA RUMANA -->
-        <div class="influenciarumana">
-            <div id="popular">
-                <p class="subtit">Influencia Popular</p>
-                <p class="inclunesubtit">Drácula:</p>
-                <p>Drácula es un personaje literario creado por el irlandés Bram Stoker en su novela "Drácula" (1897). La historia sigue a Jonathan Harker, que viaja a Transilvania para cerrar un trato con el Conde Drácula, descubriendo que es un vampiro.</p>
-                <br>
-                <p>El nombre proviene de <strong>Vlad III</strong> (1431–1476), "Vlad el Empalador", conocido por su crueldad contra los otomanos. La conexión con Rumanía ha convertido a Transilvania en un destino turístico único.</p>
+        <section class="influenciarumana om-section">
+            <div class="om-grid-3 infl-grid">
 
-                <p class="inclunesubtit">Transilvania:</p>
-                <p>Región histórica en el centro de Rumanía, famosa por sus paisajes montañosos, castillos medievales (Bran, Peles, Corvin) y la mezcla de culturas rumana, húngara y sajona. Un patrimonio cultural extraordinario.</p>
+                <div class="om-card infl-card infl-card--rojo">
+                    <div class="om-eyebrow">Cultură populară</div>
+                    <h3 class="infl-h3">Influencia Popular</h3>
 
-                <p class="inclunesubtit">Vampiros:</p>
-                <p>La figura del vampiro popularizada por Stoker ha sido reinventada en incontables obras: desde el Drácula de Stoker hasta la saga Crepúsculo o "What We Do in the Shadows". Un mito con raíces en el folclore rumano y eslavo.</p>
+                    <div class="infl-item">
+                        <div class="infl-item__h">Drácula</div>
+                        <div class="infl-item__sub infl-item__sub--rojo">Literatura, 1897</div>
+                        <p class="infl-item__body">Drácula es un personaje literario creado por el irlandés Bram Stoker en su novela "Drácula" (1897). La historia sigue a Jonathan Harker, que viaja a Transilvania para cerrar un trato con el Conde Drácula, descubriendo que es un vampiro. El nombre proviene de <strong>Vlad III</strong> (1431–1476), "Vlad el Empalador", conocido por su crueldad contra los otomanos.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Transilvania</div>
+                        <div class="infl-item__sub infl-item__sub--rojo">Región histórica</div>
+                        <p class="infl-item__body">Región histórica en el centro de Rumanía, famosa por sus paisajes montañosos, castillos medievales (Bran, Peleș, Corvin) y la mezcla de culturas rumana, húngara y sajona. Un patrimonio cultural extraordinario.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Vampiros</div>
+                        <div class="infl-item__sub infl-item__sub--rojo">Mitología</div>
+                        <p class="infl-item__body">La figura del vampiro popularizada por Stoker ha sido reinventada en incontables obras: desde el Drácula de Stoker hasta la saga Crepúsculo o "What We Do in the Shadows". Un mito con raíces en el folclore rumano y eslavo.</p>
+                    </div>
+                </div>
+
+                <div class="om-card infl-card infl-card--oro">
+                    <div class="om-eyebrow">Sport</div>
+                    <h3 class="infl-h3">Deportistas Famosos</h3>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Nadia Comăneci</div>
+                        <div class="infl-item__sub infl-item__sub--oro">Gimnasia Artística</div>
+                        <p class="infl-item__body">Primera gimnasta en obtener una puntuación perfecta de 10 en los Juegos Olímpicos de Montreal 1976. 5 medallas olímpicas de oro en total.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Simona Halep</div>
+                        <div class="infl-item__sub infl-item__sub--oro">Tenis</div>
+                        <p class="infl-item__body">Ganó Roland Garros (2018) y Wimbledon (2019). Alcanzó el nº 1 del mundo en el ranking WTA.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Gabriela Szabo</div>
+                        <div class="infl-item__sub infl-item__sub--oro">Atletismo</div>
+                        <p class="infl-item__body">Medallista de oro olímpica en Sídney 2000 (5.000 metros) y múltiple campeona del mundo.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Gheorghe Hagi</div>
+                        <div class="infl-item__sub infl-item__sub--oro">Fútbol</div>
+                        <p class="infl-item__body">"El Maradona de los Cárpatos". Brilló en el Real Madrid, Barcelona y Galatasaray. Lideró a Rumanía al cuarto de final del Mundial de 1994.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Nicu Vlad</div>
+                        <div class="infl-item__sub infl-item__sub--oro">Halterofilia</div>
+                        <p class="infl-item__body">Múltiples medallas olímpicas y mundiales, uno de los atletas más exitosos en halterofilia de Rumanía.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Elisabeta Lipă</div>
+                        <div class="infl-item__sub infl-item__sub--oro">Remo</div>
+                        <p class="infl-item__body">5 medallas de oro olímpicas en cinco Juegos Olímpicos (1984–2004). Una de las mejores remeras de todos los tiempos.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Leonard Doroftei</div>
+                        <div class="infl-item__sub infl-item__sub--oro">Boxeo</div>
+                        <p class="infl-item__body">Excampeón mundial de peso ligero, reconocido por su técnica y logros internacionales.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Ana Maria Brânză</div>
+                        <div class="infl-item__sub infl-item__sub--oro">Esgrima</div>
+                        <p class="infl-item__body">Medallas en los Juegos Olímpicos y múltiples campeonatos mundiales en espada femenino.</p>
+                    </div>
+                </div>
+
+                <div class="om-card infl-card infl-card--azul">
+                    <div class="om-eyebrow">Audiovizual</div>
+                    <h3 class="infl-h3">Influencia Audiovisual</h3>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Resident Evil Village</div>
+                        <div class="infl-item__sub infl-item__sub--azul">Videojuego, 2021</div>
+                        <p class="infl-item__body">El juego se desarrolla en un entorno ficticio inspirado en Rumanía, incorporando arquitectura y folclore de Transilvania para dar autenticidad a la experiencia.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">The Nun</div>
+                        <div class="infl-item__sub infl-item__sub--azul">Película, 2018</div>
+                        <p class="infl-item__body">Rodada parcialmente en Rumanía, usando el monasterio de Cârța y el paisaje rural como telón de fondo. Parte del universo de "El Conjuro".</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Cristian Mungiu</div>
+                        <div class="infl-item__sub infl-item__sub--azul">Director de cine</div>
+                        <p class="infl-item__body">Palma de Oro en Cannes por "4 Months, 3 Weeks and 2 Days" (2007). Ha colocado al cine rumano en el mapa internacional.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Alexander Nanau</div>
+                        <div class="infl-item__sub infl-item__sub--azul">Director de cine</div>
+                        <p class="infl-item__body">Documental "Collective" (2019), nominado al Oscar y al BAFTA. Referente del cine documental mundial.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Edward Maya</div>
+                        <div class="infl-item__sub infl-item__sub--azul">Músico</div>
+                        <p class="infl-item__body">Famoso mundialmente por "Stereo Love" (2009), uno de los mayores éxitos internacionales de la música rumana.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Inna</div>
+                        <div class="infl-item__sub infl-item__sub--azul">Cantante</div>
+                        <p class="infl-item__body">Cantante de dance y pop con éxitos como "Hot" y "Sun is Up". Reconocida en más de 50 países.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">O-Zone — Dragostea Din Tei</div>
+                        <div class="infl-item__sub infl-item__sub--azul">Música, 2004</div>
+                        <p class="infl-item__body">Convertida en fenómeno viral global. Conocida popularmente como "Numa Numa", uno de los primeros grandes virales de internet.</p>
+                    </div>
+
+                    <div class="infl-item">
+                        <div class="infl-item__h">Vladimir Cosma</div>
+                        <div class="infl-item__sub infl-item__sub--azul">Compositor</div>
+                        <p class="infl-item__body">Compositor de emotivas bandas sonoras para el cine francés (La Chèvre, Le Grand Blond...). Contribución clave a la atmósfera cinematográfica europea.</p>
+                    </div>
+                </div>
+
             </div>
-
-            <div id="deporte">
-                <p class="subtit">Deportistas Famosos</p>
-                <p class="inclunesubtit">Gimnasia Artística:</p>
-                <span>Nadia Comăneci</span>
-                <p>Primera gimnasta en obtener una puntuación perfecta de 10 en los Juegos Olímpicos de Montreal 1976. 5 medallas olímpicas de oro en total.</p>
-
-                <p class="inclunesubtit">Tenis:</p>
-                <span>Simona Halep</span>
-                <p>Ganó Roland Garros (2018) y Wimbledon (2019). Alcanzó el nº 1 del mundo en el ranking WTA.</p>
-
-                <p class="inclunesubtit">Atletismo:</p>
-                <span>Gabriela Szabo</span>
-                <p>Medallista de oro olímpica en Sídney 2000 (5.000 metros) y múltiple campeona del mundo.</p>
-
-                <p class="inclunesubtit">Fútbol:</p>
-                <span>Gheorghe Hagi</span>
-                <p>"El Maradona de los Cárpatos". Brilló en el Real Madrid, Barcelona y Galatasaray. Lideró a Rumanía al cuarto de final del Mundial de 1994.</p>
-
-                <p class="inclunesubtit">Halterofilia:</p>
-                <span>Nicu Vlad</span>
-                <p>Múltiples medallas olímpicas y mundiales, uno de los atletas más exitosos en halterofilia de Rumanía.</p>
-
-                <p class="inclunesubtit">Remo:</p>
-                <span>Elisabeta Lipă</span>
-                <p>5 medallas de oro olímpicas en cinco Juegos Olímpicos (1984–2004). Una de las mejores remeras de todos los tiempos.</p>
-
-                <p class="inclunesubtit">Boxeo:</p>
-                <span>Leonard Doroftei</span>
-                <p>Excampeón mundial de peso ligero, reconocido por su técnica y logros internacionales.</p>
-
-                <p class="inclunesubtit">Esgrima:</p>
-                <span>Ana Maria Brânză</span>
-                <p>Medallas en los Juegos Olímpicos y múltiples campeonatos mundiales en espada femenino.</p>
-            </div>
-
-            <div id="audiovisual">
-                <p class="subtit">Influencia Audiovisual</p>
-                <p class="inclunesubtit">Resident Evil Village (2021):</p>
-                <p>El juego se desarrolla en un entorno ficticio inspirado en Rumanía, incorporando arquitectura y folclore de Transilvania para dar autenticidad a la experiencia.</p>
-
-                <p class="inclunesubtit">The Nun (Película, 2018):</p>
-                <p>Rodada parcialmente en Rumanía, usando el monasterio de Cârța y el paisaje rural como telón de fondo. Parte del universo de "El Conjuro".</p>
-
-                <p class="inclunesubtit">Cristian Mungiu (Director):</p>
-                <p>Palma de Oro en Cannes por "4 Months, 3 Weeks and 2 Days" (2007). Ha colocado al cine rumano en el mapa internacional.</p>
-
-                <p class="inclunesubtit">Alexander Nanau (Director):</p>
-                <p>Documental "Collective" (2019), nominado al Oscar y al BAFTA. Referente del cine documental mundial.</p>
-
-                <p class="inclunesubtit">Edward Maya (Músico):</p>
-                <p>Famoso mundialmente por "Stereo Love" (2009), uno de los mayores éxitos internacionales de la música rumana.</p>
-
-                <p class="inclunesubtit">Inna (Cantante):</p>
-                <p>Cantante de dance y pop con éxitos como "Hot" y "Sun is Up". Reconocida en más de 50 países.</p>
-
-                <p class="inclunesubtit">O-Zone — "Dragostea Din Tei" (2004):</p>
-                <p>La icónica "Numa Numa", uno de los primeros grandes virales de internet. Un fenómeno cultural global.</p>
-
-                <p class="inclunesubtit">Vladimir Cosma (Compositor):</p>
-                <p>Compositor de emotivas bandas sonoras para el cine francés (La Chèvre, Le Grand Blond...). Contribución clave a la atmósfera cinematográfica europea.</p>
-            </div>
-        </div>
+        </section>
 
     </main>
 
@@ -851,7 +908,7 @@
                 <div class="footer-adios-sub">Hasta pronto, drag călător</div>
             </div>
             <div class="footer-nueva-center">
-                <div class="footer-flag">
+                <div class="footer-flag" onclick="verPortada()" title="Ir a portada">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -864,6 +921,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- LIGHTBOX MOSAICO -->
+    <div id="imgLightbox" class="img-lightbox">
+        <button id="imgLightboxClose" class="img-lightbox-close" aria-label="Cerrar">&times;</button>
+        <img id="imgLightboxImg" src="" alt="Imagen ampliada">
+    </div>
 
 </div>
 <script src="script.js"></script>

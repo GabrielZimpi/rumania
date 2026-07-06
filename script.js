@@ -70,17 +70,18 @@ function initUtilityStrip() {
 
 const TOTAL_IMAGES = 49;
 const TOTAL_CELLS  = 30;
+const currentImages = [];
 
 function initMosaic() {
     const cells = document.querySelectorAll('.imgporta');
     const pool = Array.from({ length: TOTAL_IMAGES }, (_, i) => i + 1);
-    const picked = [];
-    while (picked.length < TOTAL_CELLS) {
+    currentImages.length = 0;
+    while (currentImages.length < TOTAL_CELLS) {
         const i = Math.floor(Math.random() * pool.length);
-        picked.push(pool.splice(i, 1)[0]);
+        currentImages.push(pool.splice(i, 1)[0]);
     }
     cells.forEach((cell, i) => {
-        cell.style.backgroundImage = `url(imagenes/portada/portada${picked[i]}.jpg)`;
+        cell.style.backgroundImage = `url(imagenes/portada/portada${currentImages[i]}.jpg)`;
         cell.style.animationDelay  = `${i * 0.03}s`;
     });
 }
@@ -90,8 +91,39 @@ function changeBackground() {
     const idx = Math.floor(Math.random() * TOTAL_CELLS);
     let n;
     do { n = Math.floor(Math.random() * TOTAL_IMAGES) + 1; }
-    while (cells[idx].style.backgroundImage.includes(`portada${n}.jpg`));
+    while (currentImages.includes(n));
+    currentImages[idx] = n;
     cells[idx].style.backgroundImage = `url(imagenes/portada/portada${n}.jpg)`;
+}
+
+// ===== LIGHTBOX MOSAICO =====
+
+function openLightbox(cell) {
+    const match = cell.style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+    if (!match) return;
+    document.getElementById('imgLightboxImg').src = match[1];
+    document.getElementById('imgLightbox').classList.add('active');
+}
+
+function closeLightbox() {
+    document.getElementById('imgLightbox').classList.remove('active');
+}
+
+function initLightbox() {
+    document.querySelectorAll('.imgporta').forEach(cell => {
+        cell.addEventListener('click', () => openLightbox(cell));
+    });
+
+    const lightbox = document.getElementById('imgLightbox');
+    if (!lightbox) return;
+
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.getElementById('imgLightboxClose').addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLightbox();
+    });
 }
 
 // ===== NAV ACTIVO =====
@@ -145,7 +177,6 @@ function verPortada() {
     if (wrapper) wrapper.style.display = 'block';
 
     updateActiveNav(null);
-    cerrarMenuMovil();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -164,7 +195,6 @@ function cambiarTitulo(titulo) {
     }
 
     updateActiveNav(titulo);
-    cerrarMenuMovil();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -176,20 +206,6 @@ function checkPosition() {
             el.classList.add('fadeInUp');
         }
     });
-}
-
-// ===== HAMBURGUESA =====
-
-function cerrarMenuMovil() {
-    const menu = document.getElementById('menuList');
-    if (menu) menu.classList.remove('open');
-}
-
-function initNavToggle() {
-    const toggle = document.getElementById('navToggle');
-    const menu   = document.getElementById('menuList');
-    if (!toggle || !menu) return;
-    toggle.addEventListener('click', () => menu.classList.toggle('open'));
 }
 
 // ===== TECLADO =====
@@ -228,8 +244,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initUtilityStrip();
     initMosaic();
     setInterval(changeBackground, 2000);
+    initLightbox();
     initKeyboardNav();
-    initNavToggle();
     window.addEventListener('scroll', checkPosition);
     verPortada();
 });

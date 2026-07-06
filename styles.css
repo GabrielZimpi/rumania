@@ -7,13 +7,11 @@
 
 :root {
     --rojo: #CE1126;
-    --rojo-nav: #ff4a4a;
     --amarillo: #FCD116;
     --azul: #002B7F;
     --nav-bg: #ff4a4a;
     --cream: #FBF6EC;
     --dark: #1A1410;
-    --gold: #C8A86A;
     --text-dark: #1F1B16;
     --text-muted: #5C5347;
     --shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -82,6 +80,7 @@ ul { list-style: none; }
     display: flex;
     gap: 2px;
     align-items: center;
+    cursor: pointer;
 }
 
 .flag-mini span {
@@ -169,6 +168,7 @@ ul { list-style: none; }
     color: #1F1B16;
     line-height: 1;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .h1-accent {
@@ -215,18 +215,6 @@ nav {
     z-index: 100;
     background-color: var(--nav-bg);
     box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-}
-
-.nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.8rem;
-    cursor: pointer;
-    padding: 0.8rem 1rem;
-    width: 100%;
-    text-align: right;
 }
 
 #menuList {
@@ -303,11 +291,6 @@ nav {
 
 #menuList li.linone:hover {
     background-color: rgba(255,255,255,0.1);
-}
-
-/* ===== MAIN HEADING (legacy, always hidden) ===== */
-.h1 {
-    display: none !important;
 }
 
 /* ===== SECTION VISIBILITY ===== */
@@ -464,6 +447,49 @@ nav {
     box-shadow: 0 8px 24px rgba(31,27,22,0.2);
 }
 
+/* ===== LIGHTBOX MOSAICO ===== */
+.img-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(26,20,16,0.92);
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.img-lightbox.active {
+    display: flex;
+}
+
+.img-lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 4px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.img-lightbox-close {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    color: #FBF6EC;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.img-lightbox-close:hover {
+    background: rgba(255,255,255,0.24);
+}
+
 /* ===== COMPONENTES COMPARTIDOS ===== */
 
 /* Wrapper de sección */
@@ -586,41 +612,12 @@ nav {
     display: block !important;
 }
 
-.geo-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.geo-content > div {
-    flex: 1 1 300px;
-    min-width: 280px;
-}
-
-.imggeog {
-    width: 100%;
-    border-radius: var(--radius);
-    border: 2px solid var(--azul);
-    box-shadow: var(--shadow);
-}
-
 #mapaFrame {
     width: 100%;
     flex: 1;
     min-height: 360px;
     border: none;
     border-radius: 2px;
-}
-
-.textimggeo {
-    text-align: center;
-    font-size: clamp(1rem, 2.5vw, 1.6rem);
-    color: var(--text-muted);
-    font-style: italic;
-    padding: 0.5rem;
-    border-top: 2px solid var(--amarillo);
 }
 
 .geo-texto {
@@ -669,54 +666,6 @@ nav {
 
 .poblaciónycapital.activeFlex {
     display: block !important;
-}
-
-.cincuentadiv {
-    flex: 1 1 300px;
-    min-width: 260px;
-}
-
-.cincuentadiv2 {
-    flex: 1 1 300px;
-    min-width: 280px;
-}
-
-.imgcapit {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius);
-    border: 2px solid var(--azul);
-    box-shadow: var(--shadow);
-    object-fit: cover;
-}
-
-.region {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--rojo);
-    margin-top: 0.8rem;
-}
-
-.ciudad {
-    text-align: justify;
-    margin: 0.4rem 0 0.6rem 1.2rem;
-    font-size: 0.95rem;
-    color: var(--text-muted);
-}
-
-.datos-demograficos {
-    margin-top: 1.2rem;
-    padding: 1rem 1.2rem;
-    background: #f0f7ff;
-    border-radius: 8px;
-    border-left: 4px solid var(--azul);
-}
-
-.datos-demograficos ul {
-    list-style: disc;
-    padding-left: 1.2rem;
-    color: var(--text-muted);
-    margin-top: 0.4rem;
 }
 
 /* Población — mapa card */
@@ -1538,88 +1487,69 @@ nav {
 .image-item p { font-size: 0.9rem; margin: 0; }
 
 /* ===== INFLUENCIA RUMANA ===== */
-.influenciarumana {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding: 2rem;
-    justify-content: center;
+.influenciarumana.activeFlex { display: block !important; }
+
+.infl-grid { align-items: start; }
+
+.infl-card {
+    padding: 28px 26px;
+    border-top-width: 4px;
+    border-top-style: solid;
+}
+.infl-card--rojo { border-top-color: var(--rojo); }
+.infl-card--oro  { border-top-color: #B8901C; }
+.infl-card--azul { border-top-color: var(--azul); }
+
+.infl-card .om-eyebrow { margin-bottom: 6px; }
+
+.infl-h3 {
+    font-family: Fraunces, serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #1F1B16;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #E8DEC7;
 }
 
-#popular {
-    background-color: #fff0f0;
-    border: 2px solid #ffcccc;
-    border-radius: var(--radius);
-    padding: 1.2rem;
-    flex: 1 1 280px;
-    min-width: 260px;
-    max-width: 480px;
-    box-shadow: var(--shadow);
+.infl-item { margin-bottom: 20px; }
+.infl-item:last-child { margin-bottom: 0; }
+
+.infl-item__h {
+    font-family: Fraunces, serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #1F1B16;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin-bottom: 2px;
 }
 
-#deporte {
-    background-color: #fffbe6;
-    border: 2px solid #ffe58f;
-    border-radius: var(--radius);
-    padding: 1.2rem;
-    flex: 1 1 280px;
-    min-width: 260px;
-    max-width: 480px;
-    box-shadow: var(--shadow);
+.infl-item__sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
+.infl-item__sub--rojo { color: #8b0000; }
+.infl-item__sub--oro  { color: #4a3500; }
+.infl-item__sub--azul { color: #003580; }
 
-#audiovisual {
-    background-color: #f0f7ff;
-    border: 2px solid #b8d9ff;
-    border-radius: var(--radius);
-    padding: 1.2rem;
-    flex: 1 1 280px;
-    min-width: 260px;
-    max-width: 480px;
-    box-shadow: var(--shadow);
-}
-
-.subtit {
-    font-size: 1.4rem;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid currentColor;
-}
-
-#popular .subtit    { color: var(--rojo); }
-#deporte .subtit    { color: #7a5c00; }
-#audiovisual .subtit { color: var(--azul); }
-
-.inclunesubtit {
-    font-weight: 700;
-    margin: 1.2rem 0 0.3rem;
-    font-size: 1rem;
-}
-
-#popular .inclunesubtit    { color: #8b0000; }
-#deporte .inclunesubtit    { color: #4a3500; }
-#audiovisual .inclunesubtit { color: #003580; }
-
-#deporte span {
-    font-weight: 700;
-    display: block;
-    text-align: center;
-    font-size: 1.05rem;
-    color: #333;
-    margin-top: 0.2rem;
+.infl-item__body {
+    font-family: Inter, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #4A4238;
+    margin: 0;
 }
 
 /* ===== TEXTO RESALTADO ===== */
 .txtresalt   { color: #d84000; font-weight: 700; }
-.txtresalt2  { font-weight: 700; font-style: italic; text-decoration: underline wavy var(--azul); }
 .txtresalt3  { font-weight: 700; font-style: italic; }
 .txtresalt4  { font-weight: 700; font-style: italic; text-decoration: underline wavy var(--azul); }
-.txtresalt5  { font-weight: 700; font-style: italic; }
-
-.txtresaltpobl { color: var(--azul); }
-.txtresaltcap  { color: var(--rojo); }
 
 /* ===== FOOTER NUEVO ===== */
 .footer-nueva {
@@ -1668,6 +1598,7 @@ nav {
 .footer-flag {
     display: flex;
     gap: 3px;
+    cursor: pointer;
 }
 
 .footer-flag span {
@@ -1826,15 +1757,11 @@ nav {
 
     .section-hero-h2 { font-size: clamp(32px, 10vw, 60px); }
 
-    .geo-content > div { flex: 1 1 100%; }
-
     #mapaFrame { height: 300px; }
 
     .historia-hitos { flex-direction: column; }
 
     .tresdivimg { display: none; }
-
-    .poliencabezado { flex-direction: column; }
 
     .sanidad {
         flex-direction: column;
@@ -1862,16 +1789,7 @@ nav {
         align-items: center;
     }
 
-    .influenciarumana { flex-direction: column; }
-
-    #popular, #deporte, #audiovisual { max-width: 100%; }
-
     .polihislist { flex-direction: column; }
-
-    .subpolidch {
-        flex-direction: column;
-        text-align: center;
-    }
 
     .idisecundario { width: 100%; }
 
